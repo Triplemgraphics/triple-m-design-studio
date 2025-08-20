@@ -152,7 +152,7 @@
 
   /* Portfolio item */
   .portfolio-item {
-    @apply relative overflow-hidden rounded-xl cursor-pointer group;
+    @apply relative overflow-hidden rounded-xl cursor-pointer;
   }
 
   .portfolio-overlay {
