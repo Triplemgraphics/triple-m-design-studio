@@ -1,11 +1,21 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import heroImage from '@/assets/hero-design-agency.jpg';
 
 const Hero = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
@@ -35,20 +45,20 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
-            <Link
-              to="/contact"
+            <button
+              onClick={() => scrollToSection('contact')}
               className="btn-hero group inline-flex items-center"
             >
               Get Started
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Link>
+            </button>
             
-            <Link
-              to="/portfolio"
+            <button
+              onClick={() => scrollToSection('portfolio')}
               className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full font-semibold tracking-wide hover:bg-white/20 transition-all duration-300 hover:scale-105"
             >
               View Our Work
-            </Link>
+            </button>
           </div>
         </div>
       </div>
