@@ -58,6 +58,10 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300"
+                onClick={(e) => {
+                  console.log('Facebook link clicked');
+                  // Allow default behavior to continue
+                }}
               >
                 <Facebook size={20} />
               </a>
@@ -66,6 +70,10 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary transition-colors duration-300 font-bold text-sm"
+                onClick={(e) => {
+                  console.log('TikTok link clicked');
+                  // Allow default behavior to continue
+                }}
               >
                 TT
               </a>

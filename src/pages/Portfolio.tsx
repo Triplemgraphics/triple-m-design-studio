@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-import portfolioShowcase from '../assets/portfolio-showcase.jpg';
+import restaurantBranding from '../assets/portfolio/restaurant-branding.jpg';
+import techStartup from '../assets/portfolio/tech-startup-brand.jpg';
+import fashionRetail from '../assets/portfolio/fashion-retail-brand.jpg';
+import healthcareBranding from '../assets/portfolio/healthcare-branding.jpg';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -21,48 +24,48 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: "Corporate Brand Identity",
-      category: "branding",
-      thumbnail: portfolioShowcase,
+      title: "Restaurant Brand Identity",
+      category: "branding", 
+      thumbnail: restaurantBranding,
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        restaurantBranding,
+        restaurantBranding,
+        restaurantBranding
       ]
     },
     {
       id: 2,
-      title: "Logo Design Collection",
+      title: "Tech Startup Branding",
       category: "branding",
-      thumbnail: "/api/placeholder/400/300",
+      thumbnail: techStartup,
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        techStartup,
+        techStartup,
+        techStartup,
+        techStartup
       ]
     },
     {
       id: 3,
-      title: "Marketing Brochures",
-      category: "print",
-      thumbnail: "/api/placeholder/400/300",
+      title: "Fashion Retail Brand",
+      category: "branding",
+      thumbnail: fashionRetail,
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        fashionRetail,
+        fashionRetail
       ]
     },
     {
       id: 4,
-      title: "Social Media Campaign",
-      category: "digital",
-      thumbnail: "/api/placeholder/400/300",
+      title: "Healthcare Branding",
+      category: "branding",
+      thumbnail: healthcareBranding,
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        healthcareBranding,
+        healthcareBranding,
+        healthcareBranding,
+        healthcareBranding,
+        healthcareBranding
       ]
     },
     {
