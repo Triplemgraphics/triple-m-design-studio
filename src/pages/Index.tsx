@@ -10,10 +10,11 @@ import { Star, Award, Users, CheckCircle, ArrowRight, Calendar, User, Mail, Phon
 import { useToast } from '../hooks/use-toast';
 
 // Import service images
-import logoDesignImg from '../assets/services/logo-design.jpg';
-import brandingImg from '../assets/services/branding.jpg';
-import brochureImg from '../assets/services/brochure.jpg';
-import socialMediaImg from '../assets/services/social-media.jpg';
+import logoShowcase from '../assets/services/logo-showcase.jpg';
+import brandingIdentity from '../assets/services/branding-identity.jpg';
+import brochureDesign from '../assets/services/brochure-design.jpg';
+import socialMediaGraphics from '../assets/services/social-media-graphics.jpg';
+import bannerPoster from '../assets/services/banner-poster.jpg';
 
 const Index = () => {
   const { toast } = useToast();
@@ -31,105 +32,105 @@ const Index = () => {
       id: 1,
       title: 'Logo Design',
       description: 'Custom logo designs that capture your brand essence and create lasting impressions.',
-      image: logoDesignImg,
+      image: logoShowcase,
       category: 'Branding'
     },
     {
       id: 2,
       title: 'Branding & Identity',
       description: 'Complete brand identity packages including guidelines, colors, and visual elements.',
-      image: brandingImg,
+      image: brandingIdentity,
       category: 'Branding'
     },
     {
       id: 3,
       title: 'Brochure Design',
       description: 'Professional brochures that effectively communicate your message and services.',
-      image: brochureImg,
+      image: brochureDesign,
       category: 'Print'
     },
     {
       id: 4,
       title: 'Banner & Poster Design',
       description: 'Eye-catching banners and posters for events, promotions, and advertising.',
-      image: socialMediaImg,
+      image: bannerPoster,
       category: 'Print'
     },
     {
       id: 5,
       title: 'Social Media Graphics',
       description: 'Engaging social media visuals that boost your online presence and engagement.',
-      image: socialMediaImg,
+      image: socialMediaGraphics,
       category: 'Digital'
     },
     {
       id: 6,
       title: 'Company Profiles',
       description: 'Professional company profile designs that showcase your business effectively.',
-      image: brochureImg,
+      image: brochureDesign,
       category: 'Print'
     },
     {
       id: 7,
       title: 'Presentations',
       description: 'Compelling presentation designs that captivate your audience and convey your message.',
-      image: brandingImg,
+      image: brandingIdentity,
       category: 'Digital'
     },
     {
       id: 8,
       title: 'Packaging Design',
       description: 'Creative packaging solutions that make your products stand out on shelves.',
-      image: logoDesignImg,
+      image: logoShowcase,
       category: 'Print'
     },
     {
       id: 9,
       title: 'Business Cards',
       description: 'Professional business card designs that leave a memorable first impression.',
-      image: brandingImg,
+      image: brandingIdentity,
       category: 'Print'
     },
     {
       id: 10,
       title: 'Photo Editing & Manipulation',
       description: 'Expert photo editing services to enhance and transform your images.',
-      image: socialMediaImg,
+      image: socialMediaGraphics,
       category: 'Digital'
     },
     {
       id: 11,
       title: 'Mockups',
       description: 'Professional mockups to showcase your designs in realistic contexts.',
-      image: logoDesignImg,
+      image: logoShowcase,
       category: 'Digital'
     },
     {
       id: 12,
       title: 'Event Flyers',
       description: 'Attractive event flyers that grab attention and drive attendance.',
-      image: socialMediaImg,
+      image: socialMediaGraphics,
       category: 'Print'
     },
     {
       id: 13,
       title: 'Infographics',
       description: 'Visual data representations that make complex information easy to understand.',
-      image: brochureImg,
+      image: brochureDesign,
       category: 'Digital'
     },
     {
       id: 14,
       title: 'Motion Graphics',
       description: 'Dynamic motion graphics and animations for digital platforms.',
-      image: brandingImg,
+      image: brandingIdentity,
       category: 'Digital'
     },
     {
       id: 15,
       title: 'Web Graphics',
       description: 'Custom web graphics and digital assets for websites and online platforms.',
-      image: logoDesignImg,
+      image: logoShowcase,
       category: 'Digital'
     }
   ];
@@ -139,29 +140,29 @@ const Index = () => {
       id: 1,
       title: 'Logo Design Portfolio',
       category: 'Branding',
-      image: logoDesignImg,
-      images: [logoDesignImg, brandingImg, brochureImg]
+      image: logoShowcase,
+      images: [logoShowcase, brandingIdentity, brochureDesign]
     },
     {
       id: 2,
       title: 'Brand Identity Projects',
       category: 'Branding',
-      image: brandingImg,
-      images: [brandingImg, logoDesignImg, socialMediaImg]
+      image: brandingIdentity,
+      images: [brandingIdentity, logoShowcase, socialMediaGraphics]
     },
     {
       id: 3,
       title: 'Print Design Collection',
       category: 'Print',
-      image: brochureImg,
-      images: [brochureImg, socialMediaImg, logoDesignImg]
+      image: brochureDesign,
+      images: [brochureDesign, socialMediaGraphics, logoShowcase]
     },
     {
       id: 4,
       title: 'Social Media Campaigns',
       category: 'Digital',
-      image: socialMediaImg,
-      images: [socialMediaImg, brandingImg, brochureImg]
+      image: socialMediaGraphics,
+      images: [socialMediaGraphics, brandingIdentity, brochureDesign]
     }
   ];
 
@@ -170,7 +171,7 @@ const Index = () => {
       id: 1,
       title: "The Power of Visual Branding in 2025",
       excerpt: "Discover how strong visual branding can transform your business and create lasting connections with your audience.",
-      image: brandingImg,
+      image: brandingIdentity,
       date: "2025-01-15",
       author: "Triple M Graphics Team"
     },
@@ -178,7 +179,7 @@ const Index = () => {
       id: 2,
       title: "Logo Design Trends That Will Dominate This Year",
       excerpt: "Explore the latest logo design trends and learn how to create timeless designs that stand out in the market.",
-      image: logoDesignImg,
+      image: logoShowcase,
       date: "2025-01-10",
       author: "Creative Director"
     },
@@ -186,7 +187,7 @@ const Index = () => {
       id: 3,
       title: "Social Media Graphics: Best Practices for Engagement",
       excerpt: "Learn the secrets to creating social media graphics that capture attention and drive meaningful engagement.",
-      image: socialMediaImg,
+      image: socialMediaGraphics,
       date: "2025-01-05",
       author: "Digital Designer"
     }
@@ -310,7 +311,7 @@ const Index = () => {
               </div>
               <div className="order-first lg:order-last">
                 <img 
-                  src={brandingImg} 
+                  src={brandingIdentity} 
                   alt="About Triple M Graphics"
                   className="w-full h-96 object-cover rounded-lg shadow-lg"
                 />

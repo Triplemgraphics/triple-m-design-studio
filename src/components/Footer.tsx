@@ -1,16 +1,28 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Facebook, ExternalLink } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/about', label: 'About' },
-    { path: '/services', label: 'Services' },
-    { path: '/portfolio', label: 'Portfolio' },
+    { section: 'home', label: 'Home' },
+    { section: 'about', label: 'About' },
+    { section: 'services', label: 'Services' },
+    { section: 'portfolio', label: 'Portfolio' },
+    { section: 'blog', label: 'Blog' },
+    { section: 'contact', label: 'Contact' },
   ];
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offsetTop = element.offsetTop - 80;
+      window.scrollTo({
+        top: offsetTop,
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const services = [
     'Logo Design',
@@ -65,31 +77,15 @@ const Footer = () => {
             <h3 className="font-playfair font-semibold text-xl mb-6">Quick Links</h3>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link.path}>
-                  <Link
-                    to={link.path}
+                <li key={link.section}>
+                  <button
+                    onClick={() => scrollToSection(link.section)}
                     className="text-white/70 hover:text-primary transition-colors duration-300"
                   >
                     {link.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-white/70 hover:text-primary transition-colors duration-300"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-white/70 hover:text-primary transition-colors duration-300"
-                >
-                  Contact
-                </Link>
-              </li>
             </ul>
           </div>
 

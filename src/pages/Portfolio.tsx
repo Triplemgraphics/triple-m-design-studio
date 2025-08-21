@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
+import portfolioShowcase from '../assets/portfolio-showcase.jpg';
+
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -21,7 +23,7 @@ const Portfolio = () => {
       id: 1,
       title: "Corporate Brand Identity",
       category: "branding",
-      thumbnail: "/api/placeholder/400/300",
+      thumbnail: portfolioShowcase,
       images: [
         "/api/placeholder/800/600",
         "/api/placeholder/800/600",
