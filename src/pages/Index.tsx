@@ -32,14 +32,14 @@ const Index = () => {
       id: 1,
       title: 'Logo Design',
       description: 'Custom logo designs that capture your brand essence and create lasting impressions.',
-      image: logoShowcase,
+      image: "/lovable-uploads/546c305c-101c-4b81-a11b-1164a8588c26.png",
       category: 'Branding'
     },
     {
       id: 2,
       title: 'Branding & Identity',
       description: 'Complete brand identity packages including guidelines, colors, and visual elements.',
-      image: brandingIdentity,
+      image: "/lovable-uploads/605350f9-9f14-4250-a1af-50989984c11b.png",
       category: 'Branding'
     },
     {
@@ -60,7 +60,7 @@ const Index = () => {
       id: 5,
       title: 'Social Media Graphics',
       description: 'Engaging social media visuals that boost your online presence and engagement.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png",
       category: 'Digital'
     },
     {
@@ -88,7 +88,7 @@ const Index = () => {
       id: 9,
       title: 'Business Cards',
       description: 'Professional business card designs that leave a memorable first impression.',
-      image: brandingIdentity,
+      image: "/lovable-uploads/d5005d57-720a-414a-92e0-a8b09a17b9e9.png",
       category: 'Print'
     },
     {
@@ -102,7 +102,7 @@ const Index = () => {
       id: 11,
       title: 'Mockups',
       description: 'Professional mockups to showcase your designs in realistic contexts.',
-      image: logoShowcase,
+      image: "/lovable-uploads/fde51658-1aeb-48b1-b224-1c10a95b1486.png",
       category: 'Digital'
     },
     {
@@ -138,31 +138,31 @@ const Index = () => {
   const portfolioItems = [
     {
       id: 1,
-      title: 'Logo Design Portfolio',
-      category: 'Branding',
-      image: logoShowcase,
-      images: [logoShowcase, brandingIdentity, brochureDesign]
+      title: 'Social Media Campaign Designs',
+      category: 'Digital',
+      image: "/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png",
+      images: ["/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png", "/lovable-uploads/831db846-fe3b-423c-8e9d-43ef7f4afc35.png", "/lovable-uploads/735f8139-30b1-4200-8a3f-5bf9fda19a81.png"]
     },
     {
       id: 2,
-      title: 'Brand Identity Projects',
+      title: 'Brand Identity & Design Showcase',
       category: 'Branding',
-      image: brandingIdentity,
-      images: [brandingIdentity, logoShowcase, socialMediaGraphics]
+      image: "/lovable-uploads/605350f9-9f14-4250-a1af-50989984c11b.png",
+      images: ["/lovable-uploads/605350f9-9f14-4250-a1af-50989984c11b.png", "/lovable-uploads/546c305c-101c-4b81-a11b-1164a8588c26.png", "/lovable-uploads/d5005d57-720a-414a-92e0-a8b09a17b9e9.png"]
     },
     {
       id: 3,
-      title: 'Print Design Collection',
+      title: 'Print & Marketing Materials',
       category: 'Print',
-      image: brochureDesign,
-      images: [brochureDesign, socialMediaGraphics, logoShowcase]
+      image: "/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png",
+      images: ["/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png", "/lovable-uploads/00c5a5f4-a44d-41d1-bd65-2c3c399c572e.png", "/lovable-uploads/d5005d57-720a-414a-92e0-a8b09a17b9e9.png"]
     },
     {
       id: 4,
-      title: 'Social Media Campaigns',
+      title: 'Digital Design Portfolio',
       category: 'Digital',
-      image: socialMediaGraphics,
-      images: [socialMediaGraphics, brandingIdentity, brochureDesign]
+      image: "/lovable-uploads/fde51658-1aeb-48b1-b224-1c10a95b1486.png",
+      images: ["/lovable-uploads/fde51658-1aeb-48b1-b224-1c10a95b1486.png", "/lovable-uploads/b247bba0-149f-4dea-8fdb-6f7ca8ffb191.png", "/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png"]
     }
   ];
 

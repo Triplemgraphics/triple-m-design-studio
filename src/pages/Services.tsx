@@ -37,19 +37,19 @@ const Services = () => {
     {
       title: "Logo Design",
       description: "Custom logo designs that capture your brand's essence and create lasting impressions. Professional, memorable, and scalable across all platforms.",
-      image: logoDesign,
+      image: "/lovable-uploads/546c305c-101c-4b81-a11b-1164a8588c26.png",
       icon: <Palette />
     },
     {
       title: "Branding & Identity",
       description: "Complete brand identity systems including color palettes, typography, and brand guidelines that establish your unique market presence.",
-      image: branding,
+      image: "/lovable-uploads/605350f9-9f14-4250-a1af-50989984c11b.png",
       icon: <Building />
     },
     {
       title: "Brochure Design",
       description: "Professional brochures and marketing materials that effectively communicate your message and showcase your products or services.",
-      image: brochure,
+      image: "/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png",
       icon: <FileText />
     },
     {
@@ -61,13 +61,13 @@ const Services = () => {
     {
       title: "Social Media Graphics",
       description: "Engaging social media content including posts, stories, and cover designs optimized for various platforms and audiences.",
-      image: socialMedia,
+      image: "/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png",
       icon: <Share2 />
     },
     {
       title: "Company Profiles",
       description: "Professional company profile designs that showcase your business story, values, and capabilities in an impressive format.",
-      image: companyProfiles,
+      image: "/lovable-uploads/00c5a5f4-a44d-41d1-bd65-2c3c399c572e.png",
       icon: <Building />
     },
     {
@@ -85,7 +85,7 @@ const Services = () => {
     {
       title: "Business Cards",
       description: "Professional business card designs that make memorable first impressions and reflect your brand's professionalism.",
-      image: businessCards,
+      image: "/lovable-uploads/d5005d57-720a-414a-92e0-a8b09a17b9e9.png",
       icon: <CreditCard />
     },
     {
@@ -97,7 +97,7 @@ const Services = () => {
     {
       title: "Mockups",
       description: "Professional mockup designs that showcase your products and designs in realistic, appealing contexts for presentations.",
-      image: mockups,
+      image: "/lovable-uploads/fde51658-1aeb-48b1-b224-1c10a95b1486.png",
       icon: <Layers />
     },
     {
@@ -121,7 +121,7 @@ const Services = () => {
     {
       title: "Web Graphics",
       description: "Custom web graphics including banners, icons, and digital assets optimized for websites and online platforms.",
-      image: webGraphics,
+      image: "/lovable-uploads/b247bba0-149f-4dea-8fdb-6f7ca8ffb191.png",
       icon: <Monitor />
     }
   ];
