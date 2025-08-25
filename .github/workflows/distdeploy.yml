@@ -5,6 +5,8 @@ on:
     branches:
       - main  # run workflow only when pushing to main branch
 
+permissions:
+  contents: write  # <-- give actions permission to push
 jobs:
   build:
     runs-on: ubuntu-latest
