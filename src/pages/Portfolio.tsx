@@ -70,46 +70,68 @@ const Portfolio = () => {
     },
     {
       id: 5,
-      title: "Product Packaging",
-      category: "packaging",
-      thumbnail: "/api/placeholder/400/300",
+      title: "Chesfield Investment Logo",
+      category: "branding",
+      thumbnail: "/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png"
       ]
     },
     {
       id: 6,
-      title: "Event Posters",
-      category: "print",
-      thumbnail: "/api/placeholder/400/300",
+      title: "Logo Collection",
+      category: "branding",
+      thumbnail: "/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png"
       ]
     },
     {
       id: 7,
-      title: "Website Graphics",
-      category: "digital",
-      thumbnail: "/api/placeholder/400/300",
+      title: "Product Packaging - Car Shampoo",
+      category: "packaging",
+      thumbnail: "/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png"
       ]
     },
     {
       id: 8,
+      title: "Washing Powder Package Design",
+      category: "packaging",
+      thumbnail: "/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png",
+      images: [
+        "/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png"
+      ]
+    },
+    {
+      id: 9,
+      title: "Event Posters & Flyers",
+      category: "print",
+      thumbnail: "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
+      images: [
+        "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
+        "/lovable-uploads/442a1ff7-f315-4c2d-aaf4-43e6c49a6ae3.png",
+        "/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png"
+      ]
+    },
+    {
+      id: 10,
       title: "Business Card Designs",
       category: "print",
-      thumbnail: "/api/placeholder/400/300",
+      thumbnail: "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png",
       images: [
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600",
-        "/api/placeholder/800/600"
+        "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png"
+      ]
+    },
+    {
+      id: 11,
+      title: "Social Media Graphics",
+      category: "digital",
+      thumbnail: "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
+      images: [
+        "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
+        "/lovable-uploads/367bb699-ad0d-470b-a6ca-5909d9d41c31.png"
       ]
     }
   ];
