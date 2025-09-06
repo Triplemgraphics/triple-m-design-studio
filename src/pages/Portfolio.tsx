@@ -213,6 +213,10 @@ const Portfolio = () => {
                   src={item.thumbnail}
                   alt={item.title}
                   className="w-full h-64 object-cover"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${item.thumbnail}`);
+                    e.currentTarget.src = '/api/placeholder/400/300';
+                  }}
                 />
                 <div className="portfolio-overlay">
                   <h3 className="portfolio-title">{item.title}</h3>
@@ -239,14 +243,24 @@ const Portfolio = () => {
             {currentImages.length > 1 && (
               <>
                 <button
-                  onClick={prevImage}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    prevImage();
+                  }}
                   className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  aria-label="Previous image"
                 >
                   <ChevronLeft size={24} />
                 </button>
                 <button
-                  onClick={nextImage}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    nextImage();
+                  }}
                   className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  aria-label="Next image"
                 >
                   <ChevronRight size={24} />
                 </button>
@@ -256,9 +270,13 @@ const Portfolio = () => {
             {/* Image */}
             <div className="text-center">
               <img
-                src={currentImages[currentImageIndex]}
+                src={currentImages[currentImageIndex] || '/api/placeholder/800/600'}
                 alt={lightboxTitle}
                 className="max-w-full max-h-[80vh] object-contain mx-auto"
+                onError={(e) => {
+                  console.error(`Failed to load lightbox image: ${currentImages[currentImageIndex]}`);
+                  e.currentTarget.src = '/api/placeholder/800/600';
+                }}
               />
               <div className="mt-4 text-white">
                 <h3 className="text-2xl font-playfair font-semibold mb-2">{lightboxTitle}</h3>
