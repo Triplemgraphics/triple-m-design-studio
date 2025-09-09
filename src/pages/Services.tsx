@@ -91,7 +91,7 @@ const Services = () => {
     {
       title: "Photo Editing & Manipulation",
       description: "Expert photo editing services including retouching, color correction, and creative manipulation for stunning visual results.",
-      image: "user-uploads://b72aad99-0f65-4a1c-80b5-22ba1302996b.png",
+      image: "/lovable-uploads/b72aad99-0f65-4a1c-80b5-22ba1302996b.png",
       icon: <Edit3 />
     },
     {
@@ -109,7 +109,7 @@ const Services = () => {
     {
       title: "Infographics",
       description: "Data visualization and infographic designs that transform complex information into engaging, easy-to-understand visuals.",
-      image: "user-uploads://c0ac1688-987b-4195-a2a6-fd4602d92daa.png",
+      image: "/lovable-uploads/c0ac1688-987b-4195-a2a6-fd4602d92daa.png",
       icon: <BarChart3 />
     },
     {
@@ -121,7 +121,7 @@ const Services = () => {
     {
       title: "Web Graphics",
       description: "Custom web graphics including banners, icons, and digital assets optimized for websites and online platforms.",
-      image: "user-uploads://8cc84cb5-b125-4575-9a3f-6b6f486c55f5.png",
+      image: "/lovable-uploads/8cc84cb5-b125-4575-9a3f-6b6f486c55f5.png",
       icon: <Monitor />
     }
   ];
