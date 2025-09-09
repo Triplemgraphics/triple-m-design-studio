@@ -1,29 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-      
-      // Update active section based on scroll position
-      const sections = ['home', 'about', 'services', 'portfolio', 'blog', 'contact'];
-      const current = sections.find(section => {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          return rect.top <= 100 && rect.bottom >= 100;
-        }
-        return false;
-      });
-      
-      if (current) {
-        setActiveSection(current);
-      }
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -31,25 +17,13 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { section: 'home', label: 'Home' },
-    { section: 'about', label: 'About' },
-    { section: 'services', label: 'Services' },
-    { section: 'portfolio', label: 'Portfolio' },
-    { section: 'blog', label: 'Blog' },
-    { section: 'contact', label: 'Contact' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/blog', label: 'Blog' },
+    { path: '/contact', label: 'Contact' },
   ];
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const offsetTop = element.offsetTop - 80; // Account for fixed navbar
-      window.scrollTo({
-        top: offsetTop,
-        behavior: 'smooth'
-      });
-    }
-    setIsMobileMenuOpen(false);
-  };
 
   return (
     <nav
@@ -62,7 +36,7 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <button onClick={() => scrollToSection('home')} className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
             <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center shadow-lg">
               <span className="text-primary-foreground font-bold text-2xl">M</span>
             </div>
@@ -70,20 +44,20 @@ const Navigation = () => {
               <div className="font-playfair font-bold text-xl text-foreground">Triple M</div>
               <div className="text-sm font-medium text-primary tracking-wide">Graphics</div>
             </div>
-          </button>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.section}
-                onClick={() => scrollToSection(item.section)}
+              <Link
+                key={item.path}
+                to={item.path}
                 className={`nav-link ${
-                  activeSection === item.section ? 'text-primary' : 'text-foreground'
+                  location.pathname === item.path ? 'text-primary' : 'text-foreground'
                 }`}
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -101,15 +75,16 @@ const Navigation = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border shadow-lg">
             <div className="py-4">
               {navItems.map((item) => (
-                <button
-                  key={item.section}
-                  onClick={() => scrollToSection(item.section)}
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className={`block w-full text-left px-4 py-3 transition-colors hover:bg-secondary ${
-                    activeSection === item.section ? 'text-primary bg-secondary' : 'text-foreground'
+                    location.pathname === item.path ? 'text-primary bg-secondary' : 'text-foreground'
                   }`}
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
