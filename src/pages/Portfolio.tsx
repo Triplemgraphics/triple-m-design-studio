@@ -136,12 +136,23 @@ const Portfolio = () => {
     }
   ];
 
-  const filteredItems = selectedCategory === 'all' 
-    ? portfolioItems 
-    : portfolioItems.filter(item => item.category === selectedCategory);
+  // Create a flat array of all individual images
+  const allImages = portfolioItems.flatMap((item, itemIndex) => 
+    item.images.map((image, imageIndex) => ({
+      id: `${item.id}-${imageIndex}`,
+      title: item.images.length > 1 ? `${item.title} - ${imageIndex + 1}` : item.title,
+      category: item.category,
+      image: image,
+      originalItem: item
+    }))
+  );
 
-  const openLightbox = (item: typeof portfolioItems[0]) => {
-    setCurrentImages(item.images);
+  const filteredItems = selectedCategory === 'all' 
+    ? allImages 
+    : allImages.filter(item => item.category === selectedCategory);
+
+  const openLightbox = (item: typeof allImages[0]) => {
+    setCurrentImages([item.image]);
     setLightboxTitle(item.title);
     setCurrentImageIndex(0);
     setLightboxOpen(true);
@@ -210,11 +221,11 @@ const Portfolio = () => {
                 onClick={() => openLightbox(item)}
               >
                 <img
-                  src={item.thumbnail}
+                  src={item.image}
                   alt={item.title}
                   className="w-full h-64 object-cover"
                   onError={(e) => {
-                    console.error(`Failed to load image: ${item.thumbnail}`);
+                    console.error(`Failed to load image: ${item.image}`);
                     e.currentTarget.src = '/api/placeholder/400/300';
                   }}
                 />
