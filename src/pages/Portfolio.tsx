@@ -133,6 +133,79 @@ const Portfolio = () => {
         "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
         "/lovable-uploads/367bb699-ad0d-470b-a6ca-5909d9d41c31.png"
       ]
+    },
+    // Additional placeholder slots for new uploads
+    {
+      id: 12,
+      title: "Project Placeholder 1",
+      category: "branding",
+      thumbnail: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 13,
+      title: "Project Placeholder 2",
+      category: "print",
+      thumbnail: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 14,
+      title: "Project Placeholder 3",
+      category: "digital",
+      thumbnail: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 15,
+      title: "Project Placeholder 4",
+      category: "packaging",
+      thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 16,
+      title: "Project Placeholder 5",
+      category: "branding",
+      thumbnail: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 17,
+      title: "Project Placeholder 6",
+      category: "print",
+      thumbnail: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 18,
+      title: "Project Placeholder 7",
+      category: "digital",
+      thumbnail: "https://images.unsplash.com/photo-1586953208462-d35b1f4468c7?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1586953208462-d35b1f4468c7?w=800&h=600&fit=crop&auto=format"
+      ]
+    },
+    {
+      id: 19,
+      title: "Project Placeholder 8",
+      category: "packaging",
+      thumbnail: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=300&fit=crop&auto=format",
+      images: [
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&h=600&fit=crop&auto=format"
+      ]
     }
   ];
 
@@ -213,22 +286,23 @@ const Portfolio = () => {
       {/* Portfolio Grid */}
       <section className="pb-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {filteredItems.map((item) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">{filteredItems.map((item) => (
               <div
                 key={item.id}
                 className="portfolio-item group"
                 onClick={() => openLightbox(item)}
               >
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-64 object-cover"
-                  onError={(e) => {
-                    console.error(`Failed to load image: ${item.image}`);
-                    e.currentTarget.src = '/api/placeholder/400/300';
-                  }}
-                />
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                    onError={(e) => {
+                      console.error(`Failed to load image: ${item.image}`);
+                      e.currentTarget.src = '/api/placeholder/400/400';
+                    }}
+                  />
+                </div>
                 <div className="portfolio-overlay">
                   <h3 className="portfolio-title">{item.title}</h3>
                 </div>
