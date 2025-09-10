@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
-
-import restaurantBranding from '../assets/portfolio/restaurant-branding.jpg';
-import techStartup from '../assets/portfolio/tech-startup-brand.jpg';
-import fashionRetail from '../assets/portfolio/fashion-retail-brand.jpg';
-import healthcareBranding from '../assets/portfolio/healthcare-branding.jpg';
+import { portfolioItems, categories, createImageGallery } from '../data/portfolioData';
 
 const Portfolio = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -13,212 +9,8 @@ const Portfolio = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [lightboxTitle, setLightboxTitle] = useState('');
 
-  const categories = [
-    { id: 'all', name: 'All Work' },
-    { id: 'branding', name: 'Branding' },
-    { id: 'print', name: 'Print Design' },
-    { id: 'digital', name: 'Digital Design' },
-    { id: 'packaging', name: 'Packaging' },
-  ];
-
-  const portfolioItems = [
-    {
-      id: 1,
-      title: "Restaurant Brand Identity",
-      category: "branding", 
-      thumbnail: restaurantBranding,
-      images: [
-        restaurantBranding,
-        restaurantBranding,
-        restaurantBranding
-      ]
-    },
-    {
-      id: 2,
-      title: "Tech Startup Branding",
-      category: "branding",
-      thumbnail: techStartup,
-      images: [
-        techStartup,
-        techStartup,
-        techStartup,
-        techStartup
-      ]
-    },
-    {
-      id: 3,
-      title: "Fashion Retail Brand",
-      category: "branding",
-      thumbnail: fashionRetail,
-      images: [
-        fashionRetail,
-        fashionRetail
-      ]
-    },
-    {
-      id: 4,
-      title: "Healthcare Branding",
-      category: "branding",
-      thumbnail: healthcareBranding,
-      images: [
-        healthcareBranding,
-        healthcareBranding,
-        healthcareBranding,
-        healthcareBranding,
-        healthcareBranding
-      ]
-    },
-    {
-      id: 5,
-      title: "Chesfield Investment Logo",
-      category: "branding",
-      thumbnail: "/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png",
-      images: [
-        "/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png"
-      ]
-    },
-    {
-      id: 6,
-      title: "Logo Collection",
-      category: "branding",
-      thumbnail: "/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png",
-      images: [
-        "/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png"
-      ]
-    },
-    {
-      id: 7,
-      title: "Product Packaging - Car Shampoo",
-      category: "packaging",
-      thumbnail: "/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png",
-      images: [
-        "/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png"
-      ]
-    },
-    {
-      id: 8,
-      title: "Washing Powder Package Design",
-      category: "packaging",
-      thumbnail: "/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png",
-      images: [
-        "/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png"
-      ]
-    },
-    {
-      id: 9,
-      title: "Event Posters & Flyers",
-      category: "print",
-      thumbnail: "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
-      images: [
-        "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
-        "/lovable-uploads/442a1ff7-f315-4c2d-aaf4-43e6c49a6ae3.png",
-        "/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png"
-      ]
-    },
-    {
-      id: 10,
-      title: "Business Card Designs",
-      category: "print",
-      thumbnail: "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png",
-      images: [
-        "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png"
-      ]
-    },
-    {
-      id: 11,
-      title: "Social Media Graphics",
-      category: "digital",
-      thumbnail: "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
-      images: [
-        "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
-        "/lovable-uploads/367bb699-ad0d-470b-a6ca-5909d9d41c31.png"
-      ]
-    },
-    // Additional placeholder slots for new uploads
-    {
-      id: 12,
-      title: "Project Placeholder 1",
-      category: "branding",
-      thumbnail: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 13,
-      title: "Project Placeholder 2",
-      category: "print",
-      thumbnail: "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 14,
-      title: "Project Placeholder 3",
-      category: "digital",
-      thumbnail: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 15,
-      title: "Project Placeholder 4",
-      category: "packaging",
-      thumbnail: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 16,
-      title: "Project Placeholder 5",
-      category: "branding",
-      thumbnail: "https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 17,
-      title: "Project Placeholder 6",
-      category: "print",
-      thumbnail: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 18,
-      title: "Project Placeholder 7",
-      category: "digital",
-      thumbnail: "https://images.unsplash.com/photo-1586953208462-d35b1f4468c7?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1586953208462-d35b1f4468c7?w=800&h=600&fit=crop&auto=format"
-      ]
-    },
-    {
-      id: 19,
-      title: "Project Placeholder 8",
-      category: "packaging",
-      thumbnail: "https://images.unsplash.com/photo-1541643600914-78b084683601?w=400&h=300&fit=crop&auto=format",
-      images: [
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?w=800&h=600&fit=crop&auto=format"
-      ]
-    }
-  ];
-
   // Create a flat array of all individual images
-  const allImages = portfolioItems.flatMap((item, itemIndex) => 
-    item.images.map((image, imageIndex) => ({
-      id: `${item.id}-${imageIndex}`,
-      title: item.images.length > 1 ? `${item.title} - ${imageIndex + 1}` : item.title,
-      category: item.category,
-      image: image,
-      originalItem: item
-    }))
-  );
+  const allImages = createImageGallery(portfolioItems);
 
   const filteredItems = selectedCategory === 'all' 
     ? allImages 
@@ -250,11 +42,11 @@ const Portfolio = () => {
     <div className="pt-20">
       {/* Hero Section */}
       <section className="section-padding bg-pattern">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl lg:text-6xl font-playfair font-bold mb-6 text-foreground">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">
             Our Portfolio
           </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed px-2 sm:px-4">
             Explore our collection of creative work spanning branding, print design, 
             digital graphics, and more. Each project represents our commitment to 
             exceptional design and client satisfaction.
@@ -263,14 +55,14 @@ const Portfolio = () => {
       </section>
 
       {/* Category Filter */}
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <section className="py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
             {categories.map((category) => (
               <button
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
-                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                className={`px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base ${
                   selectedCategory === category.id
                     ? 'bg-primary text-primary-foreground shadow-[var(--shadow-gold)]'
                     : 'bg-secondary text-secondary-foreground hover:bg-accent'
@@ -284,15 +76,16 @@ const Portfolio = () => {
       </section>
 
       {/* Portfolio Grid */}
-      <section className="pb-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">{filteredItems.map((item) => (
+      <section className="pb-12 sm:pb-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-2 sm:gap-4">
+            {filteredItems.map((item) => (
               <div
                 key={item.id}
-                className="portfolio-item group"
+                className="portfolio-item group cursor-pointer"
                 onClick={() => openLightbox(item)}
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden rounded-lg">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -304,7 +97,7 @@ const Portfolio = () => {
                   />
                 </div>
                 <div className="portfolio-overlay">
-                  <h3 className="portfolio-title">{item.title}</h3>
+                  <h3 className="portfolio-title text-xs sm:text-sm md:text-base">{item.title}</h3>
                 </div>
               </div>
             ))}
@@ -314,14 +107,14 @@ const Portfolio = () => {
 
       {/* Lightbox Modal */}
       {lightboxOpen && (
-        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-2 sm:p-4">
           <div className="relative max-w-4xl w-full">
             {/* Close Button */}
             <button
               onClick={closeLightbox}
-              className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 z-10 w-8 h-8 sm:w-10 sm:h-10 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
             >
-              <X size={24} />
+              <X size={20} className="sm:w-6 sm:h-6" />
             </button>
 
             {/* Navigation Buttons */}
@@ -333,10 +126,10 @@ const Portfolio = () => {
                     e.stopPropagation();
                     prevImage();
                   }}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                   aria-label="Previous image"
                 >
-                  <ChevronLeft size={24} />
+                  <ChevronLeft size={20} className="sm:w-6 sm:h-6" />
                 </button>
                 <button
                   onClick={(e) => {
@@ -344,10 +137,10 @@ const Portfolio = () => {
                     e.stopPropagation();
                     nextImage();
                   }}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-10 w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white hover:bg-white/20 transition-colors"
                   aria-label="Next image"
                 >
-                  <ChevronRight size={24} />
+                  <ChevronRight size={20} className="sm:w-6 sm:h-6" />
                 </button>
               </>
             )}
@@ -357,16 +150,16 @@ const Portfolio = () => {
               <img
                 src={currentImages[currentImageIndex] || '/api/placeholder/800/600'}
                 alt={lightboxTitle}
-                className="max-w-full max-h-[80vh] object-contain mx-auto"
+                className="max-w-full max-h-[70vh] sm:max-h-[80vh] object-contain mx-auto"
                 onError={(e) => {
                   console.error(`Failed to load lightbox image: ${currentImages[currentImageIndex]}`);
                   e.currentTarget.src = '/api/placeholder/800/600';
                 }}
               />
-              <div className="mt-4 text-white">
-                <h3 className="text-2xl font-playfair font-semibold mb-2">{lightboxTitle}</h3>
+              <div className="mt-2 sm:mt-4 text-white px-4">
+                <h3 className="text-lg sm:text-2xl font-playfair font-semibold mb-1 sm:mb-2">{lightboxTitle}</h3>
                 {currentImages.length > 1 && (
-                  <p className="text-white/70">
+                  <p className="text-white/70 text-sm sm:text-base">
                     {currentImageIndex + 1} of {currentImages.length}
                   </p>
                 )}
