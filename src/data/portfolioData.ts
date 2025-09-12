@@ -16,87 +16,83 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Restaurant Brand Identity",
-    category: "branding", 
-    thumbnail: restaurantBranding,
-    images: [restaurantBranding, restaurantBranding, restaurantBranding],
-    description: "Complete brand identity design for a premium restaurant chain"
+    title: "Outdoor Billboard Design",
+    category: "print", 
+    thumbnail: "/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png",
+    images: ["/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png"],
+    description: "Large-scale outdoor advertising billboard for graphics services"
   },
   {
     id: 2,
-    title: "Tech Startup Branding",
-    category: "branding",
-    thumbnail: techStartup,
-    images: [techStartup, techStartup, techStartup, techStartup],
-    description: "Modern tech startup visual identity and brand guidelines"
+    title: "Business Card Mockups",
+    category: "print",
+    thumbnail: "/lovable-uploads/c878a607-fd41-43ae-a72c-968b1e78759d.png",
+    images: ["/lovable-uploads/c878a607-fd41-43ae-a72c-968b1e78759d.png"],
+    description: "Professional business card design with modern gradient layout"
   },
   {
     id: 3,
-    title: "Fashion Retail Brand",
+    title: "Colorful Bird Logo Design",
     category: "branding",
-    thumbnail: fashionRetail,
-    images: [fashionRetail, fashionRetail],
-    description: "Luxury fashion brand identity with elegant visual elements"
+    thumbnail: "/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png",
+    images: ["/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png"],
+    description: "Vibrant hummingbird logo created in Adobe Illustrator"
   },
   {
     id: 4,
-    title: "Healthcare Branding",
+    title: "Design Portfolio Showcase",
     category: "branding",
-    thumbnail: healthcareBranding,
-    images: [healthcareBranding, healthcareBranding, healthcareBranding, healthcareBranding, healthcareBranding],
-    description: "Professional healthcare brand identity focused on trust and care"
+    thumbnail: "/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png",
+    images: ["/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png"],
+    description: "Comprehensive display of various design materials and branding elements"
   },
   {
     id: 5,
-    title: "Chesfield Investment Logo",
-    category: "branding",
-    thumbnail: "/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png",
-    images: ["/lovable-uploads/2d396c7a-320c-4a99-ae44-a0d2d45388bf.png"],
-    description: "Corporate logo design for investment company"
+    title: "Triple M Graphics Brochure",
+    category: "print",
+    thumbnail: "/lovable-uploads/e02dde99-a61c-4b41-86ad-2c92d9ea1ffe.png",
+    images: ["/lovable-uploads/e02dde99-a61c-4b41-86ad-2c92d9ea1ffe.png"],
+    description: "Creative design service brochure with colorful graphics and service listings"
   },
   {
     id: 6,
-    title: "Logo Collection",
-    category: "branding",
-    thumbnail: "/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png",
-    images: ["/lovable-uploads/487aa273-974c-402b-8dc7-a492f7fb86fc.png"],
-    description: "Diverse logo designs showcasing creative versatility"
+    title: "Business Template Design",
+    category: "print",
+    thumbnail: "/lovable-uploads/66d4a3d9-8804-456f-8b3c-3aee3581fd8c.png",
+    images: ["/lovable-uploads/66d4a3d9-8804-456f-8b3c-3aee3581fd8c.png"],
+    description: "Professional business template created in design software"
   },
   {
     id: 7,
-    title: "Product Packaging - Car Shampoo",
-    category: "packaging",
-    thumbnail: "/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png",
-    images: ["/lovable-uploads/533158de-6d7f-4598-a8e8-3fa6ef7b0e90.png"],
-    description: "Automotive product packaging with modern design approach"
+    title: "Greenland Farm Company Profile",
+    category: "print",
+    thumbnail: "/lovable-uploads/f71b08cd-da53-438f-a351-78c47dc8728d.png",
+    images: ["/lovable-uploads/f71b08cd-da53-438f-a351-78c47dc8728d.png"],
+    description: "Organic farm company profile design with green branding"
   },
   {
     id: 8,
-    title: "Washing Powder Package Design",
-    category: "packaging",
-    thumbnail: "/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png",
-    images: ["/lovable-uploads/32da0863-8239-4f1a-9166-79de4f15e0f1.png"],
-    description: "Consumer product packaging design for household detergent"
+    title: "Style Stash Fashion Catalog",
+    category: "print",
+    thumbnail: "/lovable-uploads/1d6b5e75-ea9a-4e24-b3ef-ad5cd5319612.png",
+    images: ["/lovable-uploads/1d6b5e75-ea9a-4e24-b3ef-ad5cd5319612.png"],
+    description: "Fashion accessories catalog design featuring handbags and style elements"
   },
   {
     id: 9,
-    title: "Event Posters & Flyers",
+    title: "Restaurant Menu Design",
     category: "print",
-    thumbnail: "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
-    images: [
-      "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
-      "/lovable-uploads/442a1ff7-f315-4c2d-aaf4-43e6c49a6ae3.png",
-      "/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png"
-    ],
-    description: "Eye-catching event promotional materials and flyers"
+    thumbnail: "/lovable-uploads/ed5d283c-f500-464c-ab2c-696552df71b6.png",
+    images: ["/lovable-uploads/ed5d283c-f500-464c-ab2c-696552df71b6.png"],
+    description: "Modern food menu design with elegant layout and food photography"
   },
   {
     id: 10,
-    title: "Business Card Designs",
+    title: "Book Cover Design",
     category: "print",
-    thumbnail: "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png",
-    images: ["/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png"],
-    description: "Professional business card designs with creative layouts"
+    thumbnail: "/lovable-uploads/1f49e2da-a51c-41d0-8bb7-764016afee00.png",
+    images: ["/lovable-uploads/1f49e2da-a51c-41d0-8bb7-764016afee00.png"],
+    description: "Professional book cover design for business and prophecy themed publication"
   },
   {
     id: 11,
