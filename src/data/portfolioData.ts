@@ -116,6 +116,30 @@ export const portfolioItems: PortfolioItem[] = [
       "/lovable-uploads/735f8139-30b1-4200-8a3f-5bf9fda19a81.png"
     ],
     description: "Comprehensive social media campaign visuals"
+  },
+  {
+    id: 13,
+    title: "Crystal Edge Product Branding",
+    category: "branding",
+    thumbnail: "/lovable-uploads/aa954ecd-8a1b-4731-8109-361e6947b891.png",
+    images: [
+      "/lovable-uploads/aa954ecd-8a1b-4731-8109-361e6947b891.png",
+      "/lovable-uploads/fb3e43d9-27d9-4ebb-9044-b3cedfd69a1e.png",
+      "/lovable-uploads/4c5d9dbe-7ba3-4b49-b37f-7bf8ec44c780.png",
+      "/lovable-uploads/41e01f26-4a1f-46bc-a3ad-bd4199904e62.png"
+    ],
+    description: "Complete product branding and packaging design for Crystal Edge cleaning products line"
+  },
+  {
+    id: 14,
+    title: "Product Packaging Templates",
+    category: "branding",
+    thumbnail: "/lovable-uploads/f138f197-b12b-4864-85d5-2d1b95e49110.png",
+    images: [
+      "/lovable-uploads/f138f197-b12b-4864-85d5-2d1b95e49110.png",
+      "/lovable-uploads/8afe93c0-a0eb-435b-a490-976ec9f847a0.png"
+    ],
+    description: "Blank packaging templates and container designs for various product lines"
   }
 ];
 
