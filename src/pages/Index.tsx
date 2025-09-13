@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
 import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Badge } from '../components/ui/badge';
-import { Star, Award, Users, CheckCircle, ArrowRight, Calendar, User, Mail, Phone, MapPin, Facebook, MessageCircle, ExternalLink, X } from 'lucide-react';
+import { Star, Award, Users, CheckCircle, ArrowRight, ExternalLink, X } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { portfolioItems as allPortfolioItems } from '../data/portfolioData';
+import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
+import ProcessTimeline from '../components/ProcessTimeline';
+import Newsletter from '../components/Newsletter';
+import EnhancedContactForm from '../components/EnhancedContactForm';
 
 // Import service images
 import logoShowcase from '../assets/services/logo-showcase.jpg';
@@ -19,11 +22,6 @@ import bannerPoster from '../assets/services/banner-poster.jpg';
 
 const Index = () => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
   const [selectedService, setSelectedService] = useState('All');
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [selectedPortfolioItem, setSelectedPortfolioItem] = useState<any>(null);
@@ -143,67 +141,14 @@ const Index = () => {
     image: item.thumbnail
   }));
 
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Power of Visual Branding in 2025",
-      excerpt: "Discover how strong visual branding can transform your business and create lasting connections with your audience.",
-      image: brandingIdentity,
-      date: "2025-01-15",
-      author: "Triple M Graphics Team"
-    },
-    {
-      id: 2,
-      title: "Logo Design Trends That Will Dominate This Year",
-      excerpt: "Explore the latest logo design trends and learn how to create timeless designs that stand out in the market.",
-      image: logoShowcase,
-      date: "2025-01-10",
-      author: "Creative Director"
-    },
-    {
-      id: 3,
-      title: "Social Media Graphics: Best Practices for Engagement",
-      excerpt: "Learn the secrets to creating social media graphics that capture attention and drive meaningful engagement.",
-      image: socialMediaGraphics,
-      date: "2025-01-05",
-      author: "Digital Designer"
-    }
-  ];
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    // This can be used by child components if needed
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast({
-        title: "Error",
-        description: "Please fill in all fields.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Here you would typically send the form data to your backend
-    // For now, we'll just show a success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      message: ''
-    });
+    // This can be used by child components if needed
   };
 
   const filteredServices = selectedService === 'All' 
@@ -463,193 +408,20 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Blog Section */}
-      <section id="blog" className="section-padding bg-pattern">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-playfair font-bold mb-6 text-foreground">
-              Latest Blog Posts
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Insights, tips, and trends from the world of design
-            </p>
-          </div>
+      {/* Testimonials Section */}
+      <Testimonials />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <Card key={post.id} className="card-hover overflow-hidden">
-                <div className="aspect-video overflow-hidden">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>{new Date(post.date).toLocaleDateString()}</span>
-                    <User className="w-4 h-4 ml-2" />
-                    <span>{post.author}</span>
-                  </div>
-                  <CardTitle className="line-clamp-2">{post.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="line-clamp-3 mb-4">
-                    {post.excerpt}
-                  </CardDescription>
-                  <Button variant="outline" className="w-full">
-                    Read More
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Process Timeline */}
+      <ProcessTimeline />
 
-      {/* Contact Section */}
-      <section id="contact" className="section-padding">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-playfair font-bold mb-6 text-foreground">
-              Get In Touch
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Ready to start your next project? Let's discuss how we can help bring your vision to life.
-            </p>
-          </div>
+      {/* FAQ Section */}
+      <FAQ />
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card>
-              <CardHeader>
-                <CardTitle>Send us a message</CardTitle>
-                <CardDescription>
-                  Fill out the form below and we'll get back to you as soon as possible.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
-                      Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      placeholder="Your full name"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
-                      Email *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
-                      Message *
-                    </label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell us about your project..."
-                      className="min-h-32"
-                      required
-                    />
-                  </div>
-                  <Button type="submit" className="w-full">
-                    Send Message
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+      {/* Newsletter Section */}
+      <Newsletter />
 
-            {/* Contact Information */}
-            <div className="space-y-8">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Contact Information</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Mail className="w-5 h-5 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Email</h4>
-                      <p className="text-muted-foreground">info@triplemgraphics.co.ke</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Phone className="w-5 h-5 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Phone</h4>
-                      <p className="text-muted-foreground">+254 740 717 670</p>
-                      <p className="text-muted-foreground">+254 754 868 688</p>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <MapPin className="w-5 h-5 text-primary mt-1" />
-                    <div>
-                      <h4 className="font-semibold mb-1">Location</h4>
-                      <p className="text-muted-foreground">Nairobi, Kenya</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Follow Us</CardTitle>
-                  <CardDescription>
-                    Connect with us on social media for updates and inspiration
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex gap-4">
-                    <a
-                      href="https://www.facebook.com/profile.php?id=100088884501805"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 p-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
-                    >
-                      <Facebook className="w-5 h-5" />
-                      <span>Facebook</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                    <a
-                      href="https://www.tiktok.com/@triple.m.graphics?_t=ZM-8z26hSxoujI&_r=1"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-2 p-3 rounded-lg bg-black text-white hover:bg-gray-800 transition-colors"
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      <span>TikTok</span>
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Enhanced Contact Section */}
+      <EnhancedContactForm />
 
       {/* Lightbox Modal */}
       {lightboxOpen && selectedPortfolioItem && (
