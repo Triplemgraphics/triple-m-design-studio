@@ -175,241 +175,550 @@ const Index = () => {
         <Hero />
       </div>
       
-      {/* Brief intro section */}
-      <section className="section-padding bg-pattern">
-        <div className="container mx-auto px-4 sm:px-6 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">
-            Welcome to Triple M Graphics
-          </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed px-4">
-            We are a creative design agency specializing in visual identity, branding, 
-            and innovative design solutions. Our team combines artistic vision with 
-            strategic thinking to create designs that not only look exceptional but 
-            also drive results for your business.
-          </p>
-        </div>
-      </section>
-
-      {/* About Section */}
+      {/* About Section - Enhanced */}
       <section id="about" className="section-padding">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 lg:mb-20">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold mb-6 text-foreground">
                 About Triple M Graphics
-              </h2>
-              <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-                Your trusted partner in creative design and visual storytelling
+              </h1>
+              <p className="text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+                Transforming Ideas into Visual Masterpieces Since 2019
               </p>
+              <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 lg:mb-16">
-              <div className="order-2 lg:order-1">
-                <h3 className="text-xl sm:text-2xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">Our Story</h3>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                  Triple M Graphics was founded with a simple yet powerful vision: to help businesses 
-                  communicate their unique stories through exceptional design. We believe that great 
-                  design is not just about aesthetics—it's about creating meaningful connections 
-                  between brands and their audiences.
-                </p>
-                <p className="text-muted-foreground mb-4 sm:mb-6 leading-relaxed text-sm sm:text-base">
-                  Our team of creative professionals brings together years of experience in graphic 
-                  design, branding, and visual communication. We work closely with our clients to 
-                  understand their vision and transform it into compelling visual narratives that 
-                  resonate with their target audience.
-                </p>
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8">
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">5+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Years Experience</div>
+            {/* Hero Story Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-20">
+              <div className="space-y-8">
+                <div>
+                  <h2 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 text-foreground">
+                    Our Creative Journey
+                  </h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Founded in 2019, Triple M Graphics emerged from a passionate vision to bridge the gap 
+                    between businesses and their audiences through the power of exceptional visual design. 
+                    What started as a small creative studio has evolved into Kenya's premier design agency, 
+                    serving clients across diverse industries with innovative solutions that drive real business results.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed mb-6">
+                    Our name represents three core pillars: <strong>Mastery</strong> in our craft, 
+                    <strong>Motivation</strong> to exceed expectations, and <strong>Momentum</strong> 
+                    that propels brands forward. Every project we undertake reflects these values, 
+                    ensuring that our clients don't just get beautiful designs—they get strategic 
+                    visual solutions that enhance their market presence.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    We believe that exceptional design is born from deep understanding. That's why we 
+                    invest time in learning about your business, your challenges, and your aspirations. 
+                    This collaborative approach has earned us the trust of over 150 satisfied clients 
+                    and recognition as industry leaders in creative excellence.
+                  </p>
+                </div>
+
+                {/* Statistics */}
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="text-center p-4 bg-card rounded-lg">
+                    <div className="text-3xl font-bold text-primary mb-2">5+</div>
+                    <div className="text-sm text-muted-foreground">Years of Excellence</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">200+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Projects Completed</div>
+                  <div className="text-center p-4 bg-card rounded-lg">
+                    <div className="text-3xl font-bold text-primary mb-2">300+</div>
+                    <div className="text-sm text-muted-foreground">Projects Delivered</div>
                   </div>
-                  <div className="text-center">
-                    <div className="text-2xl sm:text-3xl font-bold text-primary mb-1 sm:mb-2">50+</div>
-                    <div className="text-xs sm:text-sm text-muted-foreground">Happy Clients</div>
+                  <div className="text-center p-4 bg-card rounded-lg">
+                    <div className="text-3xl font-bold text-primary mb-2">150+</div>
+                    <div className="text-sm text-muted-foreground">Happy Clients</div>
+                  </div>
+                  <div className="text-center p-4 bg-card rounded-lg">
+                    <div className="text-3xl font-bold text-primary mb-2">98%</div>
+                    <div className="text-sm text-muted-foreground">Client Satisfaction</div>
                   </div>
                 </div>
               </div>
-              <div className="order-1 lg:order-2">
+
+              <div className="relative">
                 <img 
                   src={brandingIdentity} 
-                  alt="About Triple M Graphics"
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover rounded-lg shadow-lg"
+                  alt="Triple M Graphics Design Studio"
+                  className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
                 />
+                <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
+                <div className="absolute -top-6 -right-6 w-24 h-24 bg-secondary/10 rounded-full blur-2xl"></div>
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
-              <Card className="card-hover">
-                <CardHeader className="pb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
-                    <Award className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg sm:text-xl">Our Mission</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    To empower businesses with exceptional design solutions that communicate their 
-                    brand message effectively and drive meaningful engagement with their audience.
+            {/* Mission, Vision & Values */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+              <Card className="card-hover text-center p-8 bg-gradient-to-br from-primary/5 to-transparent">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Our Mission</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed">
+                    To empower businesses of all sizes with exceptional design solutions that not only 
+                    capture attention but also communicate brand messages effectively, foster meaningful 
+                    connections, and drive sustainable growth in an increasingly visual world.
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="card-hover">
-                <CardHeader className="pb-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4">
-                    <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
-                  </div>
-                  <CardTitle className="text-lg sm:text-xl">Our Vision</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground text-sm sm:text-base">
-                    To be the leading creative design agency in Kenya, known for innovative solutions 
-                    and exceptional client service that transforms businesses through the power of design.
+              <Card className="card-hover text-center p-8 bg-gradient-to-br from-secondary/5 to-transparent">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Star className="w-8 h-8 text-secondary" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Our Vision</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed">
+                    To be East Africa's most trusted creative design agency, recognized for transforming 
+                    businesses through innovative visual storytelling, strategic design thinking, and 
+                    an unwavering commitment to excellence that sets new industry standards.
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="card-hover text-center p-8 bg-gradient-to-br from-accent/5 to-transparent">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-accent" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Our Values</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed">
+                    Integrity in every interaction, creativity without compromise, collaboration as our 
+                    foundation, and continuous innovation that pushes boundaries while maintaining 
+                    the highest standards of professionalism and client satisfaction.
                   </p>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="bg-card rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-playfair font-bold mb-4 sm:mb-6 text-center text-foreground">Why Choose Us?</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            {/* What Sets Us Apart */}
+            <div className="bg-card rounded-2xl p-8 lg:p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 text-foreground">
+                  What Sets Us Apart
+                </h3>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Our unique approach combines artistic excellence with strategic thinking to deliver results that exceed expectations
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <Users className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Users className="w-10 h-10 text-primary" />
                   </div>
-                  <h4 className="font-semibold mb-2 text-sm sm:text-base">Client-Focused</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    We prioritize understanding your unique needs and delivering personalized solutions.
+                  <h4 className="text-xl font-semibold mb-4">Client-Centric Approach</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We don't just listen—we immerse ourselves in your business to understand your unique 
+                    challenges and opportunities, ensuring every design solution is perfectly aligned with your goals.
                   </p>
                 </div>
+
                 <div className="text-center">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <CheckCircle className="w-10 h-10 text-secondary" />
                   </div>
-                  <h4 className="font-semibold mb-2 text-sm sm:text-base">Quality Assured</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    Every project undergoes rigorous quality checks to ensure exceptional results.
+                  <h4 className="text-xl font-semibold mb-4">Quality Guarantee</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Our rigorous quality assurance process includes multiple review stages, client feedback 
+                    integration, and final optimization to ensure every deliverable meets our exacting standards.
                   </p>
                 </div>
+
                 <div className="text-center">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4">
-                    <Award className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Award className="w-10 h-10 text-accent" />
                   </div>
-                  <h4 className="font-semibold mb-2 text-sm sm:text-base">Creative Excellence</h4>
-                  <p className="text-xs sm:text-sm text-muted-foreground">
-                    Our team brings creativity and innovation to every project we undertake.
+                  <h4 className="text-xl font-semibold mb-4">Creative Innovation</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We stay ahead of design trends while maintaining timeless appeal, using cutting-edge 
+                    tools and techniques to create visuals that stand out in today's competitive marketplace.
                   </p>
                 </div>
+
+                <div className="text-center">
+                  <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Star className="w-10 h-10 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-semibold mb-4">Results-Driven Design</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Every design decision is backed by strategy. We create visuals that not only look 
+                    exceptional but also drive engagement, conversions, and business growth for our clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Team Philosophy */}
+            <div className="mt-20 text-center">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-8 text-foreground">
+                  Our Creative Philosophy
+                </h3>
+                <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+                  "Great design is not just what looks good. Great design is what works beautifully, 
+                  communicates clearly, and creates lasting connections between brands and their audiences."
+                </p>
+                <div className="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Services Section - Enhanced */}
       <section id="services" className="section-padding bg-pattern">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">
-              Our Services
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Comprehensive design solutions tailored to your business needs
-            </p>
-          </div>
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 lg:mb-20">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold mb-6 text-foreground">
+                Our Services
+              </h1>
+              <p className="text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+                Comprehensive Design Solutions That Transform Your Business Vision Into Reality
+              </p>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
 
-          {/* Service Filter */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
-            {['All', 'Branding', 'Print', 'Digital'].map((category) => (
-              <Button
-                key={category}
-                variant={selectedService === category ? 'default' : 'outline'}
-                onClick={() => setSelectedService(category)}
-                className="rounded-full text-sm sm:text-base px-4 sm:px-6"
+            {/* Service Categories Overview */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20">
+              <Card className="card-hover p-8 text-center bg-gradient-to-br from-primary/5 to-transparent">
+                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-10 h-10 text-primary" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Branding & Identity</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Complete brand identity solutions from concept to implementation. We create cohesive 
+                    visual identities that resonate with your target audience and differentiate you in the marketplace.
+                  </p>
+                  <Badge variant="outline" className="mb-2 mr-2">Logo Design</Badge>
+                  <Badge variant="outline" className="mb-2 mr-2">Brand Guidelines</Badge>
+                  <Badge variant="outline" className="mb-2">Visual Identity</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="card-hover p-8 text-center bg-gradient-to-br from-secondary/5 to-transparent">
+                <div className="w-20 h-20 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-10 h-10 text-secondary" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Print Design</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    High-impact print materials that command attention and communicate your message effectively. 
+                    From business cards to large-format displays, we ensure every piece reflects your brand excellence.
+                  </p>
+                  <Badge variant="outline" className="mb-2 mr-2">Brochures</Badge>
+                  <Badge variant="outline" className="mb-2 mr-2">Business Cards</Badge>
+                  <Badge variant="outline" className="mb-2">Marketing Materials</Badge>
+                </CardContent>
+              </Card>
+
+              <Card className="card-hover p-8 text-center bg-gradient-to-br from-accent/5 to-transparent">
+                <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Star className="w-10 h-10 text-accent" />
+                </div>
+                <CardTitle className="text-2xl mb-4 font-playfair">Digital Design</CardTitle>
+                <CardContent className="p-0">
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    Engaging digital assets optimized for online platforms. We create visually stunning content 
+                    that captures attention in the digital space and drives meaningful engagement with your audience.
+                  </p>
+                  <Badge variant="outline" className="mb-2 mr-2">Social Media</Badge>
+                  <Badge variant="outline" className="mb-2 mr-2">Web Graphics</Badge>
+                  <Badge variant="outline" className="mb-2">Motion Graphics</Badge>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Service Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {['All', 'Branding', 'Print', 'Digital'].map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedService === category ? 'default' : 'outline'}
+                  onClick={() => setSelectedService(category)}
+                  className="rounded-full text-base px-8 py-2 font-medium"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredServices.map((service) => (
+                <ServiceCard key={service.id} {...service} />
+              ))}
+            </div>
+
+            {/* Why Choose Our Services */}
+            <div className="mt-20 bg-card rounded-2xl p-8 lg:p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 text-foreground">
+                  Why Choose Our Design Services
+                </h3>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Our comprehensive approach ensures every project delivers exceptional results that exceed expectations
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Users className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3">Strategic Consultation</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Every project begins with in-depth consultation to understand your business objectives and target audience.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle className="w-8 h-8 text-secondary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3">Quality Assurance</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Rigorous quality checks at every stage ensure flawless execution and professional results.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Award className="w-8 h-8 text-accent" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3">Creative Excellence</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Award-winning designs that combine aesthetic appeal with strategic marketing effectiveness.
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <Star className="w-8 h-8 text-primary" />
+                  </div>
+                  <h4 className="text-lg font-semibold mb-3">Timely Delivery</h4>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    Reliable project management ensures on-time delivery without compromising on quality or creativity.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Service Process */}
+            <div className="mt-20 text-center">
+              <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-8 text-foreground">
+                Our Service Process
+              </h3>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                A streamlined approach that ensures exceptional results from concept to completion
+              </p>
+              <Button 
+                size="lg" 
+                className="px-8 py-3"
+                onClick={() => {
+                  const processSection = document.getElementById('process');
+                  if (processSection) {
+                    processSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
               >
-                {category}
+                View Our Process
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
-            ))}
-          </div>
-
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {filteredServices.map((service) => (
-              <ServiceCard key={service.id} {...service} />
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Portfolio Section */}
+      {/* Portfolio Section - Enhanced */}
       <section id="portfolio" className="section-padding">
         <div className="container mx-auto px-4 sm:px-6">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-playfair font-bold mb-4 sm:mb-6 text-foreground">
-              Our Portfolio
-            </h2>
-            <p className="text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
-              Showcasing our best work and creative solutions
-            </p>
-          </div>
+          <div className="max-w-7xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16 lg:mb-20">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-playfair font-bold mb-6 text-foreground">
+                Our Portfolio
+              </h1>
+              <p className="text-xl sm:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+                Showcasing Excellence: A Collection of Our Most Impactful Design Solutions
+              </p>
+              <div className="w-24 h-1 bg-primary mx-auto"></div>
+            </div>
 
-          {/* Portfolio Filter */}
-          <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12">
-            {['All', 'Branding', 'Print', 'Digital'].map((category) => (
-              <Button
-                key={category}
-                variant={selectedService === category ? 'default' : 'outline'}
-                onClick={() => setSelectedService(category)}
-                className="rounded-full text-sm sm:text-base px-4 sm:px-6"
-              >
-                {category}
-              </Button>
-            ))}
-          </div>
+            {/* Portfolio Statistics */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">300+</div>
+                <div className="text-muted-foreground">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">150+</div>
+                <div className="text-muted-foreground">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">50+</div>
+                <div className="text-muted-foreground">Industries Served</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-primary mb-2">5+</div>
+                <div className="text-muted-foreground">Years of Excellence</div>
+              </div>
+            </div>
 
-          {/* Portfolio Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {filteredPortfolioItems.map((item) => (
-              <div
-                key={item.id}
-                className="portfolio-item group cursor-pointer"
-                onClick={() => openLightbox(item)}
-              >
-                <div className="relative overflow-hidden rounded-lg">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="w-full h-48 sm:h-56 lg:h-64 object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-center text-white p-4">
-                      <h3 className="font-semibold text-base sm:text-lg mb-2">{item.title}</h3>
-                      <Badge variant="secondary" className="text-xs sm:text-sm">{item.category}</Badge>
+            {/* Portfolio Categories Introduction */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-primary" />
+                </div>
+                <h3 className="text-2xl font-playfair font-bold mb-4">Brand Identity Projects</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Complete brand transformations that established market presence and drove business growth 
+                  for our clients across various industries.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-secondary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle className="w-8 h-8 text-secondary" />
+                </div>
+                <h3 className="text-2xl font-playfair font-bold mb-4">Print Design Excellence</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  High-impact print materials that commanded attention and effectively communicated 
+                  our clients' messages in both local and international markets.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Star className="w-8 h-8 text-accent" />
+                </div>
+                <h3 className="text-2xl font-playfair font-bold mb-4">Digital Innovation</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Cutting-edge digital designs that increased online engagement and helped our clients 
+                  stand out in the competitive digital landscape.
+                </p>
+              </div>
+            </div>
+
+            {/* Portfolio Filter */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {['All', 'Branding', 'Print', 'Digital'].map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedService === category ? 'default' : 'outline'}
+                  onClick={() => setSelectedService(category)}
+                  className="rounded-full text-base px-8 py-2 font-medium"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+
+            {/* Portfolio Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8 mb-16">
+              {filteredPortfolioItems.map((item) => (
+                <div
+                  key={item.id}
+                  className="portfolio-item group cursor-pointer"
+                  onClick={() => openLightbox(item)}
+                >
+                  <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-64 lg:h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300">
+                      <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                        <h3 className="text-xl font-bold mb-2 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">{item.title}</h3>
+                        <Badge variant="secondary" className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 delay-75">{item.category}</Badge>
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                          <ExternalLink className="w-5 h-5 text-white" />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
 
-          {/* View More Button */}
-          <div className="text-center mt-8 sm:mt-12">
-            <button 
-              className="btn-hero"
-              onClick={() => {
-                const portfolioSection = document.getElementById('portfolio');
-                if (portfolioSection) {
-                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-            >
-              View Full Portfolio
-              <ArrowRight className="ml-2 w-4 h-4" />
-            </button>
+            {/* Client Success Stories */}
+            <div className="bg-card rounded-2xl p-8 lg:p-12 mb-16">
+              <div className="text-center mb-12">
+                <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 text-foreground">
+                  Portfolio Impact
+                </h3>
+                <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                  Real results from our portfolio projects that transformed businesses and exceeded expectations
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">40%</div>
+                  <div className="text-lg font-semibold mb-2">Average Brand Recognition Increase</div>
+                  <p className="text-muted-foreground text-sm">
+                    Our branding projects typically result in significant improvements in brand awareness and market recognition.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">300%</div>
+                  <div className="text-lg font-semibold mb-2">Social Media Engagement Boost</div>
+                  <p className="text-muted-foreground text-sm">
+                    Our social media designs dramatically increase engagement rates and follower growth for clients.
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-primary mb-2">95%</div>
+                  <div className="text-lg font-semibold mb-2">Client Retention Rate</div>
+                  <p className="text-muted-foreground text-sm">
+                    Our exceptional results and service quality ensure long-term partnerships with our clients.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to Action */}
+            <div className="text-center">
+              <h3 className="text-3xl sm:text-4xl font-playfair font-bold mb-6 text-foreground">
+                Ready to Create Your Success Story?
+              </h3>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+                Join our growing portfolio of successful projects and transform your business with exceptional design
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Button 
+                  size="lg" 
+                  className="px-8 py-3"
+                  onClick={() => {
+                    const contactSection = document.getElementById('contact');
+                    if (contactSection) {
+                      contactSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
+                >
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+                <Button 
+                  variant="outline" 
+                  size="lg" 
+                  className="px-8 py-3"
+                  onClick={() => openLightbox(filteredPortfolioItems[0])}
+                >
+                  View Gallery
+                  <ExternalLink className="ml-2 w-5 h-5" />
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
