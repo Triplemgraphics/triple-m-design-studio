@@ -171,7 +171,9 @@ const Index = () => {
 
   return (
     <div>
-      <Hero />
+      <div id="hero">
+        <Hero />
+      </div>
       
       {/* Brief intro section */}
       <section className="section-padding bg-pattern">
@@ -396,14 +398,18 @@ const Index = () => {
 
           {/* View More Button */}
           <div className="text-center mt-8 sm:mt-12">
-            <Button 
-              variant="outline" 
+            <button 
               className="btn-hero"
-              onClick={() => window.location.href = '/portfolio'}
+              onClick={() => {
+                const portfolioSection = document.getElementById('portfolio');
+                if (portfolioSection) {
+                  portfolioSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
             >
               View Full Portfolio
               <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            </button>
           </div>
         </div>
       </section>
@@ -421,7 +427,9 @@ const Index = () => {
       <Newsletter />
 
       {/* Enhanced Contact Section */}
-      <EnhancedContactForm />
+      <div id="contact">
+        <EnhancedContactForm />
+      </div>
 
       {/* Lightbox Modal */}
       {lightboxOpen && selectedPortfolioItem && (
