@@ -17,24 +17,13 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { section: 'hero', label: 'Home' },
-    { section: 'about', label: 'About' },
-    { section: 'services', label: 'Services' },
-    { section: 'portfolio', label: 'Portfolio' },
-    { section: 'contact', label: 'Contact' },
+    { path: '/', label: 'Home' },
+    { path: '/about', label: 'About' },
+    { path: '/services', label: 'Services' },
+    { path: '/portfolio', label: 'Portfolio' },
+    { path: '/faq', label: 'FAQ' },
+    { path: '/contact', label: 'Contact' },
   ];
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const navHeight = 80; // Navigation height
-      const elementPosition = element.offsetTop - navHeight;
-      window.scrollTo({
-        top: elementPosition,
-        behavior: 'smooth'
-      });
-    }
-  };
 
   return (
     <nav
@@ -60,13 +49,13 @@ const Navigation = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <button
-                key={item.section}
-                onClick={() => scrollToSection(item.section)}
+              <Link
+                key={item.path}
+                to={item.path}
                 className="nav-link text-foreground hover:text-primary transition-colors"
               >
                 {item.label}
-              </button>
+              </Link>
             ))}
           </div>
 
@@ -84,16 +73,14 @@ const Navigation = () => {
           <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border shadow-lg">
             <div className="py-4">
               {navItems.map((item) => (
-                <button
-                  key={item.section}
-                  onClick={() => {
-                    scrollToSection(item.section);
-                    setIsMobileMenuOpen(false);
-                  }}
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
                   className="block w-full text-left px-4 py-3 transition-colors hover:bg-secondary text-foreground"
                 >
                   {item.label}
-                </button>
+                </Link>
               ))}
             </div>
           </div>
