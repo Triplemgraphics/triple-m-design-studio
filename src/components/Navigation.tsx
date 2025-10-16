@@ -30,19 +30,19 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? 'bg-background/95 backdrop-blur-md shadow-[var(--shadow-card)]'
-          : 'bg-transparent'
+          : 'bg-background/80 backdrop-blur-sm shadow-[0_4px_20px_rgba(218,165,32,0.3)]'
       }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
-            <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center shadow-lg">
+          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300 hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(218,165,32,0.5)] animate-pulse">
               <span className="text-primary-foreground font-bold text-2xl">M</span>
             </div>
             <div className="text-left">
-              <div className="font-playfair font-bold text-xl text-foreground">Triple M</div>
-              <div className="text-sm font-medium text-primary tracking-wide">Graphics</div>
+              <div className="font-playfair font-bold text-xl text-foreground drop-shadow-md">Triple M</div>
+              <div className="text-sm font-medium text-primary tracking-wide drop-shadow-sm">Graphics</div>
             </div>
           </Link>
 
@@ -52,7 +52,7 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="nav-link text-foreground hover:text-primary transition-colors"
+                className="nav-link text-foreground hover:text-primary transition-all duration-300 font-medium drop-shadow-sm hover:drop-shadow-md hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-primary-glow after:transition-all after:duration-300 hover:after:w-full"
               >
                 {item.label}
               </Link>
