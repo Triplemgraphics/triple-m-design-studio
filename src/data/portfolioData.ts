@@ -16,11 +16,11 @@ export interface PortfolioItem {
 export const portfolioItems: PortfolioItem[] = [
   {
     id: 1,
-    title: "Outdoor Billboard Design",
-    category: "print", 
-    thumbnail: "/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png",
-    images: ["/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png"],
-    description: "Large-scale outdoor advertising billboard for graphics services"
+    title: "Logo Design & Brand Identity",
+    category: "branding", 
+    thumbnail: "/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png",
+    images: ["/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png"],
+    description: "Vibrant custom logo design showcasing our creative branding capabilities"
   },
   {
     id: 2,
@@ -32,35 +32,35 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 3,
-    title: "Colorful Bird Logo Design",
-    category: "branding",
-    thumbnail: "/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png",
-    images: ["/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png"],
-    description: "Vibrant hummingbird logo created in Adobe Illustrator"
+    title: "Banner & Poster Design",
+    category: "print",
+    thumbnail: "/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png",
+    images: ["/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png"],
+    description: "Large-scale outdoor advertising billboard design"
   },
   {
     id: 4,
-    title: "Design Portfolio Showcase",
-    category: "branding",
+    title: "Social Media Content Management",
+    category: "digital",
     thumbnail: "/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png",
     images: ["/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png"],
-    description: "Comprehensive display of various design materials and branding elements"
+    description: "Comprehensive social media graphics and branding elements for consistent online presence"
   },
   {
     id: 5,
-    title: "Triple M Graphics Brochure",
+    title: "Brochure & Marketing Materials",
     category: "print",
     thumbnail: "/lovable-uploads/e02dde99-a61c-4b41-86ad-2c92d9ea1ffe.png",
     images: ["/lovable-uploads/e02dde99-a61c-4b41-86ad-2c92d9ea1ffe.png"],
-    description: "Creative design service brochure with colorful graphics and service listings"
+    description: "Professional brochure design showcasing our comprehensive service offerings"
   },
   {
     id: 6,
-    title: "Business Template Design",
-    category: "print",
+    title: "Email Marketing Graphics",
+    category: "digital",
     thumbnail: "/lovable-uploads/66d4a3d9-8804-456f-8b3c-3aee3581fd8c.png",
     images: ["/lovable-uploads/66d4a3d9-8804-456f-8b3c-3aee3581fd8c.png"],
-    description: "Professional business template created in design software"
+    description: "Professional email newsletter template and marketing graphics"
   },
   {
     id: 7,
@@ -80,34 +80,34 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 9,
-    title: "Restaurant Menu Design",
-    category: "print",
+    title: "UI/UX Design & Website Graphics",
+    category: "digital",
     thumbnail: "/lovable-uploads/ed5d283c-f500-464c-ab2c-696552df71b6.png",
     images: ["/lovable-uploads/ed5d283c-f500-464c-ab2c-696552df71b6.png"],
-    description: "Modern food menu design with elegant layout and food photography"
+    description: "Modern menu interface design showcasing our UI/UX capabilities"
   },
   {
     id: 10,
-    title: "Book Cover Design",
-    category: "print",
+    title: "E-book & PDF Layout Design",
+    category: "digital",
     thumbnail: "/lovable-uploads/1f49e2da-a51c-41d0-8bb7-764016afee00.png",
     images: ["/lovable-uploads/1f49e2da-a51c-41d0-8bb7-764016afee00.png"],
-    description: "Professional book cover design for business and prophecy themed publication"
+    description: "Professional book cover and digital publication layout design"
   },
   {
     id: 11,
-    title: "Social Media Graphics",
+    title: "Motion Graphics & Video Editing",
     category: "digital",
     thumbnail: "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
     images: [
       "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
       "/lovable-uploads/367bb699-ad0d-470b-a6ca-5909d9d41c31.png"
     ],
-    description: "Engaging social media graphics for various platforms"
+    description: "Dynamic animated content and video graphics for social media"
   },
   {
     id: 12,
-    title: "Social Media Campaign Designs",
+    title: "Event Invitations & Digital Cards",
     category: "digital",
     thumbnail: "/lovable-uploads/fb082b04-9f4c-46df-8835-77fb8eeb5819.png",
     images: [
@@ -115,7 +115,7 @@ export const portfolioItems: PortfolioItem[] = [
       "/lovable-uploads/831db846-fe3b-423c-8e9d-43ef7f4afc35.png", 
       "/lovable-uploads/735f8139-30b1-4200-8a3f-5bf9fda19a81.png"
     ],
-    description: "Comprehensive social media campaign visuals"
+    description: "Beautiful event invitations and social media graphics"
   },
   {
     id: 13,
@@ -132,14 +132,62 @@ export const portfolioItems: PortfolioItem[] = [
   },
   {
     id: 14,
-    title: "Product Packaging Templates",
+    title: "Product Mockups & Packaging Design",
     category: "branding",
     thumbnail: "/lovable-uploads/f138f197-b12b-4864-85d5-2d1b95e49110.png",
     images: [
       "/lovable-uploads/f138f197-b12b-4864-85d5-2d1b95e49110.png",
       "/lovable-uploads/8afe93c0-a0eb-435b-a490-976ec9f847a0.png"
     ],
-    description: "Blank packaging templates and container designs for various product lines"
+    description: "Professional packaging templates and product mockup designs"
+  },
+  {
+    id: 15,
+    title: "Photo Editing & Manipulation",
+    category: "digital",
+    thumbnail: "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
+    images: ["/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png"],
+    description: "Professional photo editing and retouching services"
+  },
+  {
+    id: 16,
+    title: "YouTube Thumbnails & Channel Branding",
+    category: "digital",
+    thumbnail: "/lovable-uploads/8cc84cb5-b125-4575-9a3f-6b6f486c55f5.png",
+    images: ["/lovable-uploads/8cc84cb5-b125-4575-9a3f-6b6f486c55f5.png"],
+    description: "Eye-catching YouTube thumbnails and video content graphics"
+  },
+  {
+    id: 17,
+    title: "Infographics & Visual Reports",
+    category: "digital",
+    thumbnail: "/lovable-uploads/c0ac1688-987b-4195-a2a6-fd4602d92daa.png",
+    images: ["/lovable-uploads/c0ac1688-987b-4195-a2a6-fd4602d92daa.png"],
+    description: "Data visualization and infographic design"
+  },
+  {
+    id: 18,
+    title: "Brand Style Guide Creation",
+    category: "branding",
+    thumbnail: "/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png",
+    images: ["/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png"],
+    description: "Comprehensive brand guidelines and style documentation"
+  },
+  {
+    id: 19,
+    title: "Presentation & Pitch Deck Design",
+    category: "print",
+    thumbnail: "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png",
+    images: ["/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png"],
+    description: "Professional presentation and pitch deck layouts"
+  },
+  {
+    id: 20,
+    title: "Animated Logo Stings & Video Intros",
+    category: "digital",
+    thumbnail: "/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png",
+    images: ["/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png"],
+    description: "Dynamic animated logo reveals and video intro sequences"
   }
 ];
 
