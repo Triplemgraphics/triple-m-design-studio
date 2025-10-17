@@ -6,9 +6,12 @@ const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offsetTop = element.offsetTop - 80;
+      const navHeight = 80;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
+      
       window.scrollTo({
-        top: offsetTop,
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
@@ -22,6 +25,7 @@ const Hero = () => {
           src={heroImage}
           alt="Creative Design Studio"
           className="w-full h-full object-cover"
+          loading="eager"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30"></div>
       </div>

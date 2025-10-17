@@ -9,13 +9,7 @@ import FAQ from '../components/FAQ';
 import Testimonials from '../components/Testimonials';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import { portfolioItems, categories } from '../data/portfolioData';
-
-// Import service images
-import logoShowcase from '../assets/services/logo-showcase.jpg';
 import brandingIdentity from '../assets/services/branding-identity.jpg';
-import brochureDesign from '../assets/services/brochure-design.jpg';
-import socialMediaGraphics from '../assets/services/social-media-graphics.jpg';
-import bannerPoster from '../assets/services/banner-poster.jpg';
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState('All');
@@ -28,21 +22,21 @@ const Index = () => {
       id: 1,
       title: 'Logo Design & Brand Identity',
       description: 'Your logo is the face of your business. Our custom logo designs and complete brand identity packages capture your brand essence and create powerful, lasting impressions that set you apart from competitors.',
-      image: "/lovable-uploads/546c305c-101c-4b81-a11b-1164a8588c26.png",
+      image: "/lovable-uploads/4e14bef3-25c2-49dc-a6b8-73b0bee9ca46.png",
       category: 'Branding'
     },
     {
       id: 2,
       title: 'Business Cards & Stationery Design',
       description: 'Professional business cards and stationery designs that leave memorable first impressions and establish credibility. A well-designed card increases follow-up rates by 40%.',
-      image: "/lovable-uploads/d5005d57-720a-414a-92e0-a8b09a17b9e9.png",
+      image: "/lovable-uploads/c878a607-fd41-43ae-a72c-968b1e78759d.png",
       category: 'Print'
     },
     {
       id: 3,
       title: 'Flyers, Posters & Brochure Design',
       description: 'Eye-catching print materials that drive up to 400% more foot traffic. Our brochures effectively communicate your message with 79% of recipients sharing them with others.',
-      image: brochureDesign,
+      image: "/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png",
       category: 'Print'
     },
     {
@@ -56,112 +50,112 @@ const Index = () => {
       id: 5,
       title: 'Social Media Page Setup & Optimization',
       description: 'Complete social media presence setup and optimization across all platforms. We ensure your profiles are professional, consistent, and optimized for maximum reach and engagement.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png",
       category: 'Digital'
     },
     {
       id: 6,
       title: 'Social Media Content Management',
       description: 'Consistent, engaging content that builds your brand and community. Our content management services ensure your social media stays active, relevant, and aligned with your business goals.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/29b09750-e8ad-4ba1-9752-67ba557ddaa0.png",
       category: 'Digital'
     },
     {
       id: 7,
       title: 'Motion Graphics for Ads & Intros',
       description: 'Dynamic motion graphics that increase viewer retention by 95% and conversion rates by up to 80%. Perfect for ads, intros, and explainer content that captivates audiences.',
-      image: brandingIdentity,
+      image: "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
       category: 'Digital'
     },
     {
       id: 8,
       title: 'Animated Logo Stings/Reveal Videos',
       description: 'Professional animated logo reveals that bring your brand to life. These short, impactful animations enhance brand recognition and add polish to all your video content.',
-      image: logoShowcase,
+      image: "/lovable-uploads/f7f3a19d-bf35-4262-9303-586ed09e9179.png",
       category: 'Digital'
     },
     {
       id: 9,
       title: 'Promo Video Editing',
       description: 'Expert video editing that transforms raw footage into compelling promotional content. Our editing increases message retention and drives viewer action across all platforms.',
-      image: brandingIdentity,
+      image: "/lovable-uploads/fb1e859d-4e1b-4f16-9bc2-ac8b4c1ec1bd.png",
       category: 'Digital'
     },
     {
       id: 10,
       title: 'YouTube Thumbnails & Channel Branding',
       description: 'Click-worthy YouTube thumbnails and complete channel branding that increases click-through rates by up to 154%. Stand out in search results and recommended videos.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/8cc84cb5-b125-4575-9a3f-6b6f486c55f5.png",
       category: 'Digital'
     },
     {
       id: 11,
       title: 'Website Banner & Ad Design',
       description: 'High-converting web banners and digital ads that grab attention and drive clicks. Our designs increase time-on-site by 88% and significantly reduce bounce rates.',
-      image: bannerPoster,
+      image: "/lovable-uploads/202cb0a6-6395-40f5-976a-9478c1e56afd.png",
       category: 'Digital'
     },
     {
       id: 12,
       title: 'Company Profile & Pitch Decks',
       description: 'Professional company profiles and pitch decks that win contracts and attract investors. Our designs showcase your business story in formats that command respect and open doors.',
-      image: brochureDesign,
+      image: "/lovable-uploads/dcd533ba-0f17-4fd9-af32-6f77f19c0cbb.png",
       category: 'Print'
     },
     {
       id: 13,
       title: 'Product Mockup Design (Packaging, T-Shirts, Billboards)',
       description: 'Realistic mockups that increase client approval rates by 75%. Visualize your designs on packaging, apparel, billboards, and more before production.',
-      image: "/lovable-uploads/fde51658-1aeb-48b1-b224-1c10a95b1486.png",
+      image: "/lovable-uploads/f138f197-b12b-4864-85d5-2d1b95e49110.png",
       category: 'Print'
     },
     {
       id: 14,
       title: 'Infographics & Visual Reports',
       description: 'Infographics are 30x more likely to be read than text articles. Our visual data representations make complex information digestible, shareable, and memorable.',
-      image: brochureDesign,
+      image: "/lovable-uploads/c0ac1688-987b-4195-a2a6-fd4602d92daa.png",
       category: 'Digital'
     },
     {
       id: 15,
       title: 'UI/UX Design for Apps and Websites',
       description: 'User-centered interface designs that enhance usability and increase conversions. Our designs create seamless experiences that keep users engaged and coming back.',
-      image: logoShowcase,
+      image: "/lovable-uploads/ed5d283c-f500-464c-ab2c-696552df71b6.png",
       category: 'Digital'
     },
     {
       id: 16,
       title: 'Event Invite & Digital Card Design',
       description: 'Stunning event invitations and digital cards that create excitement and drive attendance. Our designs make your events memorable from the first impression.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/831db846-fe3b-423c-8e9d-43ef7f4afc35.png",
       category: 'Digital'
     },
     {
       id: 17,
       title: 'Professional Photo Editing & Manipulation',
       description: 'High-quality images increase content engagement by 94%. Our expert photo editing enhances and transforms your images for professional marketing materials and e-commerce.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/a6b47f0c-7686-4d3c-9de4-fd79f42c5b76.png",
       category: 'Digital'
     },
     {
       id: 18,
       title: 'E-book & Digital PDF Layout Design',
       description: 'Professional e-book and PDF layouts that enhance readability and engagement. Our designs make your digital publications look polished and professional.',
-      image: brochureDesign,
+      image: "/lovable-uploads/1f49e2da-a51c-41d0-8bb7-764016afee00.png",
       category: 'Digital'
     },
     {
       id: 19,
       title: 'Brand Style Guide Creation',
       description: 'Comprehensive brand guidelines that ensure consistency across all touchpoints. Our style guides empower your team to maintain brand integrity and recognition.',
-      image: brandingIdentity,
+      image: "/lovable-uploads/c5649789-1a55-4eae-802f-ff421d2ab055.png",
       category: 'Branding'
     },
     {
       id: 20,
       title: 'Email Marketing Graphics & Newsletter Design',
       description: 'Compelling email graphics and newsletter designs that increase open rates and click-throughs. Our designs make your messages stand out in crowded inboxes.',
-      image: socialMediaGraphics,
+      image: "/lovable-uploads/66d4a3d9-8804-456f-8b3c-3aee3581fd8c.png",
       category: 'Digital'
     }
   ];
@@ -243,6 +237,7 @@ const Index = () => {
                   src={brandingIdentity} 
                   alt="Triple M Graphics Design Studio"
                   className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -391,6 +386,7 @@ const Index = () => {
                       src={item.thumbnail}
                       alt={item.title}
                       className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <ExternalLink className="w-8 h-8 text-white" />
