@@ -10,6 +10,7 @@ import Testimonials from '../components/Testimonials';
 import EnhancedContactForm from '../components/EnhancedContactForm';
 import { portfolioItems, categories } from '../data/portfolioData';
 import brandingIdentity from '../assets/services/branding-identity.jpg';
+import StructuredData from '../components/StructuredData';
 
 const Index = () => {
   const [selectedService, setSelectedService] = useState('All');
@@ -182,6 +183,9 @@ const Index = () => {
 
   return (
     <div>
+      <StructuredData type="organization" />
+      <StructuredData type="services" />
+      <StructuredData type="breadcrumb" />
       <Hero />
 
       {/* About Section */}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
+import LoadingSkeleton from '@/components/LoadingSkeleton';
 
 interface BlogPost {
   id: string;
@@ -106,9 +107,11 @@ const Blog = () => {
 
       {/* Loading State */}
       {loading && (
-        <section className="pb-12">
-          <div className="container mx-auto px-4 text-center">
-            <p className="text-muted-foreground">Loading blog posts...</p>
+        <section className="section-padding">
+          <div className="container mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <LoadingSkeleton type="portfolio" count={6} />
+            </div>
           </div>
         </section>
       )}
@@ -124,6 +127,9 @@ const Blog = () => {
                     src={featuredPost.featured_image_url || "/api/placeholder/600/400"}
                     alt={featuredPost.title}
                     className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="600"
+                    height="400"
                   />
                   <div className="absolute top-4 left-4">
                     <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
@@ -170,6 +176,9 @@ const Blog = () => {
                       src={post.featured_image_url || "/api/placeholder/600/400"}
                       alt={post.title}
                       className="w-full h-48 object-cover"
+                      loading="lazy"
+                      width="600"
+                      height="400"
                     />
                     <div className="absolute top-4 left-4">
                       <span className="bg-white/90 backdrop-blur-sm text-foreground px-3 py-1 rounded-full text-sm font-medium">
