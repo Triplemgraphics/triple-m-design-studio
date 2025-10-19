@@ -42,13 +42,6 @@ const Portfolio = () => {
 
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
-              <Button
-                variant={selectedCategory === 'All' ? "default" : "outline"}
-                onClick={() => setSelectedCategory('All')}
-                className="text-sm font-medium transition-all duration-300"
-              >
-                All Work
-              </Button>
               {categories.map((category) => (
                 <Button
                   key={category.id}

@@ -192,11 +192,10 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 export const categories = [
-  { id: 'all', name: 'All Work' },
+  { id: 'all', name: 'All' },
   { id: 'branding', name: 'Branding' },
-  { id: 'print', name: 'Print Design' },
-  { id: 'digital', name: 'Digital Design' },
-  { id: 'packaging', name: 'Packaging' },
+  { id: 'print', name: 'Print' },
+  { id: 'digital', name: 'Digital' },
 ];
 
 // Create a flat array of all individual images for gallery view
