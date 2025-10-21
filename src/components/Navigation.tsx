@@ -37,12 +37,16 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105">
+          <Link to="/" className="flex items-center gap-3 hover:opacity-90 transition-all duration-300 hover:scale-105">
             <img 
               src={logo} 
               alt="Triple M Graphics Logo" 
-              className="h-16 w-auto"
+              className="h-16 w-16 rounded-full object-cover border-2 border-primary shadow-lg"
             />
+            <div className="hidden sm:block">
+              <div className="font-playfair font-bold text-xl text-primary">Triple M</div>
+              <div className="text-sm font-semibold text-primary-glow">Graphics</div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

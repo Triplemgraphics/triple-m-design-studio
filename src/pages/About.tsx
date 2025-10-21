@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardTitle } from '../components/ui/card';
 import { Award, Star, CheckCircle, Users } from 'lucide-react';
-import brandingIdentity from '../assets/services/branding-identity.jpg';
+import billboard from '../assets/billboard.jpg';
 
 const About = () => {
   return (
@@ -71,8 +71,8 @@ const About = () => {
 
               <div className="relative">
                 <img 
-                  src={brandingIdentity} 
-                  alt="Triple M Graphics Design Studio"
+                  src={billboard} 
+                  alt="Triple M Graphics Billboard Showcase"
                   className="w-full h-96 lg:h-[500px] object-cover rounded-2xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl"></div>
