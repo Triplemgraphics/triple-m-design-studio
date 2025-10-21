@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '@/assets/triple-m-logo.jpg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,14 +37,12 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300 hover:scale-105">
-            <div className="w-12 h-12 bg-gradient-to-r from-primary to-primary-glow rounded-lg flex items-center justify-center shadow-[0_0_20px_rgba(218,165,32,0.5)] animate-pulse">
-              <span className="text-primary-foreground font-bold text-2xl">M</span>
-            </div>
-            <div className="text-left">
-              <div className="font-playfair font-bold text-xl text-foreground drop-shadow-md">Triple M</div>
-              <div className="text-sm font-medium text-primary tracking-wide drop-shadow-sm">Graphics</div>
-            </div>
+          <Link to="/" className="flex items-center hover:opacity-90 transition-all duration-300 hover:scale-105">
+            <img 
+              src={logo} 
+              alt="Triple M Graphics Logo" 
+              className="h-16 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}
