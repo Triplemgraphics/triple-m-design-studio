@@ -18,6 +18,7 @@ const Navigation = () => {
 
   const navItems = [
     { path: '/', label: 'Home' },
+    { path: '/blog', label: 'Blog' },
     { path: '/about', label: 'About' },
     { path: '/services', label: 'Services' },
     { path: '/portfolio', label: 'Portfolio' },
@@ -48,8 +49,8 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Navigation Buttons - Always Visible */}
-          <div className="flex items-center gap-3 flex-wrap">
+          {/* Navigation Buttons - Mobile Friendly */}
+          <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -57,7 +58,8 @@ const Navigation = () => {
               >
                 <Button
                   variant={location.pathname === item.path ? "default" : "outline"}
-                  className="text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                  size="sm"
+                  className="text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold text-xs px-2 py-1 h-7"
                 >
                   {item.label}
                 </Button>
