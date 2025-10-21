@@ -52,7 +52,9 @@ const Navigation = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className="nav-link text-foreground hover:text-primary transition-all duration-300 font-medium drop-shadow-sm hover:drop-shadow-md hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-primary-glow after:transition-all after:duration-300 hover:after:w-full"
+                className={`nav-link text-primary hover:text-primary-glow transition-all duration-300 font-semibold text-base drop-shadow-sm hover:drop-shadow-md hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-primary-glow after:transition-all after:duration-300 hover:after:w-full ${
+                  location.pathname === item.path ? 'text-primary-glow after:scale-x-100' : ''
+                }`}
               >
                 {item.label}
               </Link>
@@ -77,7 +79,9 @@ const Navigation = () => {
                   key={item.path}
                   to={item.path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block w-full text-left px-4 py-3 transition-colors hover:bg-secondary text-foreground"
+                  className={`block w-full text-left px-4 py-3 transition-colors hover:bg-secondary font-semibold ${
+                    location.pathname === item.path ? 'text-primary-glow bg-secondary/50' : 'text-primary'
+                  }`}
                 >
                   {item.label}
                 </Link>
