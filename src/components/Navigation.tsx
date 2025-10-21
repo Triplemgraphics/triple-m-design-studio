@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import logo from '@/assets/triple-m-logo.jpg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -49,49 +48,23 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Navigation Buttons - Always Visible */}
+          <div className="flex items-center gap-3 flex-wrap">
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-link text-primary hover:text-primary-glow transition-all duration-300 font-semibold text-base drop-shadow-sm hover:drop-shadow-md hover:scale-110 relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-gradient-to-r after:from-primary after:to-primary-glow after:transition-all after:duration-300 hover:after:w-full ${
-                  location.pathname === item.path ? 'text-primary-glow after:scale-x-100' : ''
-                }`}
               >
-                {item.label}
+                <Button
+                  variant={location.pathname === item.path ? "default" : "outline"}
+                  className="text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                >
+                  {item.label}
+                </Button>
               </Link>
             ))}
           </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden p-2"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md border-t border-border shadow-lg">
-            <div className="py-4">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block w-full text-left px-4 py-3 transition-colors hover:bg-secondary font-semibold ${
-                    location.pathname === item.path ? 'text-primary-glow bg-secondary/50' : 'text-primary'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
       </div>
     </nav>
   );
