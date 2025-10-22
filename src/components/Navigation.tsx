@@ -62,7 +62,7 @@ const Navigation = () => {
                 <Button
                   variant={location.pathname === item.path ? "default" : "outline"}
                   size="sm"
-                  className="text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold text-xs px-2 py-1 h-7"
+                  className="text-foreground border-primary hover:bg-primary hover:text-primary-foreground font-semibold text-xs px-2 py-1 h-7"
                 >
                   {item.label}
                 </Button>
@@ -87,7 +87,7 @@ const Navigation = () => {
                   >
                     <Button
                       variant={location.pathname === item.path ? "default" : "outline"}
-                      className="w-full text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                      className="w-full text-foreground border-primary hover:bg-primary hover:text-primary-foreground font-semibold"
                     >
                       {item.label}
                     </Button>
