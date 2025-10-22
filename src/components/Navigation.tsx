@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Menu } from 'lucide-react';
 import logo from '@/assets/triple-m-logo.jpg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -49,8 +52,8 @@ const Navigation = () => {
             </div>
           </Link>
 
-          {/* Navigation Buttons - Mobile Friendly */}
-          <div className="flex items-center gap-1 sm:gap-2 flex-wrap">
+          {/* Desktop Navigation - Hidden on Mobile */}
+          <div className="hidden md:flex items-center gap-2 flex-wrap">
             {navItems.map((item) => (
               <Link
                 key={item.path}
@@ -66,6 +69,33 @@ const Navigation = () => {
               </Link>
             ))}
           </div>
+
+          {/* Mobile Menu - Hamburger */}
+          <Sheet open={isMobileMenuOpen} onOpenChange={setIsMobileMenuOpen}>
+            <SheetTrigger asChild className="md:hidden">
+              <Button variant="outline" size="sm" className="text-primary border-primary">
+                <Menu className="h-5 w-5" />
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[250px] bg-background">
+              <div className="flex flex-col gap-4 mt-8">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Button
+                      variant={location.pathname === item.path ? "default" : "outline"}
+                      className="w-full text-primary border-primary hover:bg-primary hover:text-primary-foreground font-semibold"
+                    >
+                      {item.label}
+                    </Button>
+                  </Link>
+                ))}
+              </div>
+            </SheetContent>
+          </Sheet>
         </div>
       </div>
     </nav>
