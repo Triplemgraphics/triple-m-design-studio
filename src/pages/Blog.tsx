@@ -8,16 +8,13 @@ interface BlogPost {
   title: string;
   slug: string;
   excerpt: string;
-  content: string;
   featured_image_url: string | null;
   category: string;
   tags: string[] | null;
-  published: boolean;
   featured: boolean;
   author_name: string;
   author_avatar_url: string | null;
   created_at: string;
-  updated_at: string;
 }
 
 const Blog = () => {
@@ -34,9 +31,10 @@ const Blog = () => {
     try {
       const { data, error } = await supabase
         .from('blog_posts')
-        .select('*')
+        .select('id, title, slug, excerpt, featured_image_url, category, tags, featured, author_name, author_avatar_url, created_at')
         .eq('published', true)
-        .order('created_at', { ascending: false });
+        .order('created_at', { ascending: false })
+        .limit(20);
 
       if (error) throw error;
 
