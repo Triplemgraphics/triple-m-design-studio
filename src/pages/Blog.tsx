@@ -22,6 +22,7 @@ const Blog = () => {
   const [categories, setCategories] = useState<string[]>(['All Posts']);
   const [selectedCategory, setSelectedCategory] = useState('All Posts');
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetchBlogPosts();
@@ -29,6 +30,9 @@ const Blog = () => {
 
   const fetchBlogPosts = async () => {
     try {
+      setLoading(true);
+      setError(null);
+      
       const { data, error } = await supabase
         .from('blog_posts')
         .select('id, title, slug, excerpt, featured_image_url, category, tags, featured, author_name, author_avatar_url, created_at')
@@ -47,6 +51,7 @@ const Blog = () => {
       }
     } catch (error) {
       console.error('Error fetching blog posts:', error);
+      setError('Unable to connect to database. Please check your connection and try again.');
     } finally {
       setLoading(false);
     }
@@ -102,6 +107,23 @@ const Blog = () => {
           </div>
         </div>
       </section>
+
+      {/* Error State */}
+      {error && !loading && (
+        <section className="section-padding">
+          <div className="container mx-auto px-4 text-center">
+            <div className="bg-destructive/10 border border-destructive/20 rounded-xl p-8 max-w-md mx-auto">
+              <p className="text-destructive text-lg mb-4">{error}</p>
+              <button 
+                onClick={fetchBlogPosts}
+                className="btn-primary"
+              >
+                Retry Connection
+              </button>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Loading State */}
       {loading && (
