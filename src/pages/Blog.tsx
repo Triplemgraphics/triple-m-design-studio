@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, User, ArrowRight } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import LoadingSkeleton from '@/components/LoadingSkeleton';
+import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: string;
@@ -174,9 +175,9 @@ const Blog = () => {
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {featuredPost.excerpt}
                   </p>
-                  <button className="inline-flex items-center text-primary font-semibold hover:text-primary-glow transition-colors">
+                  <Link to={`/blog/${featuredPost.slug}`} className="inline-flex items-center text-primary font-semibold hover:text-primary-glow transition-colors">
                     Read More <ArrowRight className="ml-2 w-4 h-4" />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -223,9 +224,9 @@ const Blog = () => {
                     <p className="text-muted-foreground mb-4 leading-relaxed line-clamp-3">
                       {post.excerpt}
                     </p>
-                    <button className="inline-flex items-center text-primary font-medium hover:text-primary-glow transition-colors">
+                    <Link to={`/blog/${post.slug}`} className="inline-flex items-center text-primary font-medium hover:text-primary-glow transition-colors">
                       Read More <ArrowRight className="ml-2 w-4 h-4" />
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}
