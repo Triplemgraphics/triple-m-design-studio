@@ -294,8 +294,8 @@ const EnhancedContactForm = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a href="mailto:info@tripleMgraphics.com" className="text-primary hover:underline">
-                      info@tripleMgraphics.com
+                    <a href="mailto:info@triplemgraphics.co.ke" className="text-primary hover:underline">
+                      info@triplemgraphics.co.ke
                     </a>
                   </div>
                 </div>
@@ -306,8 +306,12 @@ const EnhancedContactForm = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Phone</p>
-                    <a href="tel:+254700000000" className="text-primary hover:underline">
-                      +254 700 000 000
+                    <a href="tel:+254740717670" className="text-primary hover:underline">
+                      +254 740 717 670
+                    </a>
+                    <br />
+                    <a href="tel:+254754868688" className="text-primary hover:underline">
+                      +254 754 868 688
                     </a>
                   </div>
                 </div>
@@ -344,12 +348,12 @@ const EnhancedContactForm = () => {
                 </p>
                 <div className="flex gap-2">
                   <Button variant="outline" size="sm" asChild>
-                    <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wa.me/254740717670" target="_blank" rel="noopener noreferrer">
                       WhatsApp
                     </a>
                   </Button>
                   <Button variant="outline" size="sm" asChild>
-                    <a href="tel:+254700000000">
+                    <a href="tel:+254740717670">
                       Call Now
                     </a>
                   </Button>
