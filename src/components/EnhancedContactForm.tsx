@@ -294,8 +294,8 @@ const EnhancedContactForm = () => {
                   </div>
                   <div>
                     <p className="font-medium text-foreground">Email</p>
-                    <a href="mailto:info@triplemgraphics.co.ke" className="text-primary hover:underline">
-                      info@triplemgraphics.co.ke
+                    <a href="mailto:triplemgraphics092@gmail.com" className="text-primary hover:underline">
+                      triplemgraphics092@gmail.com
                     </a>
                   </div>
                 </div>
