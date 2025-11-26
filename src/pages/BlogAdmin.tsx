@@ -25,6 +25,8 @@ const BlogAdmin = () => {
   const [loading, setLoading] = useState(true);
   const [editingPost, setEditingPost] = useState<BlogPost | null>(null);
   const [showForm, setShowForm] = useState(false);
+  const [uploadingImage, setUploadingImage] = useState(false);
+  const [imageFile, setImageFile] = useState<File | null>(null);
   const { toast } = useToast();
 
   const [formData, setFormData] = useState({
@@ -74,15 +76,57 @@ const BlogAdmin = () => {
       .trim();
   };
 
+  const uploadImage = async (file: File): Promise<string | null> => {
+    try {
+      setUploadingImage(true);
+      const fileExt = file.name.split('.').pop();
+      const fileName = `${Math.random().toString(36).substring(2)}-${Date.now()}.${fileExt}`;
+      const filePath = `${fileName}`;
+
+      const { error: uploadError } = await supabase.storage
+        .from('blog-images')
+        .upload(filePath, file);
+
+      if (uploadError) throw uploadError;
+
+      const { data } = supabase.storage
+        .from('blog-images')
+        .getPublicUrl(filePath);
+
+      return data.publicUrl;
+    } catch (error) {
+      console.error('Error uploading image:', error);
+      toast({
+        title: "Error",
+        description: "Failed to upload image",
+        variant: "destructive"
+      });
+      return null;
+    } finally {
+      setUploadingImage(false);
+    }
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
+      let imageUrl = formData.featured_image_url;
+
+      // Upload new image if selected
+      if (imageFile) {
+        const uploadedUrl = await uploadImage(imageFile);
+        if (uploadedUrl) {
+          imageUrl = uploadedUrl;
+        }
+      }
+
       const slug = formData.slug || generateSlug(formData.title);
       const tagsArray = formData.tags ? formData.tags.split(',').map(tag => tag.trim()).filter(tag => tag) : null;
       
       const postData = {
         ...formData,
+        featured_image_url: imageUrl,
         slug,
         tags: tagsArray
       };
@@ -181,6 +225,7 @@ const BlogAdmin = () => {
       featured: false,
       author_name: 'Triple M Graphics'
     });
+    setImageFile(null);
     setEditingPost(null);
     setShowForm(false);
   };
@@ -261,13 +306,33 @@ const BlogAdmin = () => {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-2">Featured Image URL</label>
+                  <label className="block text-sm font-medium mb-2">Featured Image</label>
                   <input
-                    type="url"
-                    value={formData.featured_image_url}
-                    onChange={(e) => setFormData({...formData, featured_image_url: e.target.value})}
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        setImageFile(file);
+                      }
+                    }}
                     className="w-full px-3 py-2 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
                   />
+                  {imageFile && (
+                    <p className="text-sm text-muted-foreground mt-2">
+                      Selected: {imageFile.name}
+                    </p>
+                  )}
+                  {formData.featured_image_url && !imageFile && (
+                    <div className="mt-2">
+                      <img 
+                        src={formData.featured_image_url} 
+                        alt="Current featured" 
+                        className="w-32 h-32 object-cover rounded-lg"
+                      />
+                      <p className="text-sm text-muted-foreground mt-1">Current image</p>
+                    </div>
+                  )}
                 </div>
 
                 <div className="grid grid-cols-2 gap-4">
@@ -333,9 +398,10 @@ const BlogAdmin = () => {
                 <div className="flex gap-4 pt-4">
                   <button
                     type="submit"
-                    className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors"
+                    disabled={uploadingImage}
+                    className="bg-primary text-primary-foreground px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {editingPost ? 'Update' : 'Create'} Post
+                    {uploadingImage ? 'Uploading...' : editingPost ? 'Update' : 'Create'} Post
                   </button>
                   <button
                     type="button"
