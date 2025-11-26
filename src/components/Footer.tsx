@@ -116,10 +116,10 @@ const Footer = () => {
             <div>
               <h4 className="font-semibold mb-2">Email</h4>
               <a
-                href="mailto:info@triplemgraphics.co.ke"
+                href="mailto:triplemgraphics092@gmail.com"
                 className="text-white/70 hover:text-primary transition-colors duration-300"
               >
-                info@triplemgraphics.co.ke
+                triplemgraphics092@gmail.com
               </a>
             </div>
             <div>
